@@ -23,7 +23,6 @@ public class est_med : Estrutura
         Medico = script_med;
 
 
-
     }
 
 

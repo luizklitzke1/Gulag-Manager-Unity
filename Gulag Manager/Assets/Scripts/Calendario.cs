@@ -22,27 +22,26 @@ public class Calendario : MonoBehaviour
     private string[] meses = {"Janeiro","Fevereiro","Março","Abril","Maio","Junho",
                      "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
 
+    public float vel_base;
     public float vel;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        StartCoroutine(Contar_Dia());
+        StartCoroutine("Contar_Dia");
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
 
     }
 
     IEnumerator Contar_Dia()
     {
         yield return new WaitForSeconds(vel);
-
                 
         if (dia_pos == 6)
         {

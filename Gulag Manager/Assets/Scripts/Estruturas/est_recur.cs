@@ -21,6 +21,15 @@ public class est_recur : Estrutura
 
         Recursos = script_recur;
 
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
+        //Lembrar de tirar isso daki posteriormente
+
         if (ControladorGame.gulag_game.extracao_tipo == "Madeira")
         {
             animator.SetFloat("tipoExtract", -1);
@@ -29,11 +38,7 @@ public class est_recur : Estrutura
         {
             animator.SetFloat("tipoExtract", 1);
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 }

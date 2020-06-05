@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\info_gameplay.cs" />
      <Compile Include="Assets\Scripts\resize_img.cs" />
      <Compile Include="Assets\Scripts\selecionar_gulag.cs" />
+     <Compile Include="Assets\Scripts\set_vel.cs" />
      <Compile Include="Assets\Scripts\test_gameplay.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
