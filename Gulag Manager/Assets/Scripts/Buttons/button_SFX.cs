@@ -12,8 +12,6 @@ public class button_SFX : MonoBehaviour
     public AudioClip hoverFx;
     public AudioClip clickFx;
 
-    private bool selected = false;
-
     public void HoverSound()
     {
         myFx.PlayOneShot (hoverFx);

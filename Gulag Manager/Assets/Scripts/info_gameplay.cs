@@ -72,7 +72,7 @@ public class info_gameplay : MonoBehaviour
 
         }
         */
-        nome_gulag.SetText(Controlador.gulag_atual.nome);
+        nome_gulag.SetText(ControladorGame.gulag_game.nome);
 
 
     }
