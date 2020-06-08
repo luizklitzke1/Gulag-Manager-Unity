@@ -37,46 +37,61 @@ public class Calendario : MonoBehaviour
     void Update()
     {
 
+        if (vel == 0){
+            StartCoroutine("Contar_Dia");
+        }
+
     }
 
     IEnumerator Contar_Dia()
     {
-        yield return new WaitForSeconds(vel);
+
+        if (vel != 0)
+        {
+
+            yield return new WaitForSeconds(vel);
                 
-        if (dia_pos == 6)
-        {
-            dia_pos = 0;
-            semana ++;
-        }
-        else
-        {
-            dia_pos += 1;
-        }
-            
-
-        if (dia == 28)
-        {
-            mes ++;
-            dia = 1;
-            semana = 0;
-
-        }
-        else
-        {
-            dia ++;
-        }
-
-        if (mes == 13)
-        {
-            ano ++;
-            mes = 1;
-        }
-
-        txt_mes_ano.SetText(meses[mes] + " - " + Convert.ToString(ano));
-        txt_dia.SetText("Dia - " + Convert.ToString(dia));
-        txt_vel.SetText("Vel - " + Convert.ToString(vel) + "s / dia");
+            if (dia_pos == 6)
+            {
+                dia_pos = 0;
+                semana ++;
+            }
+            else
+            {
+                dia_pos += 1;
+            }
                 
-        StartCoroutine(Contar_Dia());
+
+            if (dia == 28)
+            {
+                mes ++;
+                dia = 1;
+                semana = 0;
+
+            }
+            else
+            {
+                dia ++;
+            }
+
+            if (mes == 13)
+            {
+                ano ++;
+                mes = 1;
+            }
+
+            txt_mes_ano.SetText(meses[mes] + " - " + Convert.ToString(ano));
+            txt_dia.SetText("Dia - " + Convert.ToString(dia));
+            txt_vel.SetText("Vel - " + Convert.ToString(vel) + "s / dia");
+
+            StartCoroutine(Contar_Dia());
+
+        }
+        else{
+            txt_vel.SetText("Vel - Pausado");
+        }
+
+        
 
     }
 

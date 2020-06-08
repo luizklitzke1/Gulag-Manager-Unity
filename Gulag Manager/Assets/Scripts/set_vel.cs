@@ -42,14 +42,23 @@ public class set_vel : MonoBehaviour
     public void Set_Vel()
     {
 
-        for (int i = 0;i<3;i++)
+        for (int i = 0;i<4;i++)
         {
-            outlines[i].SetActive(false);
+            //outlines[i].SetActive(false);
         }
 
-        highlight_outline.SetActive(true);
+        //highlight_outline.SetActive(true);
 
-        Calendario.vel = Calendario.vel_base/new_vel;
+        if (new_vel != 0)
+        {
+            Calendario.vel = Calendario.vel_base/new_vel;
+        }
+        else
+        {
+            Calendario.vel = 0;
+        }
+        
+
     }
 
 }
