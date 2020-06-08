@@ -30,7 +30,8 @@ public class Calendario : MonoBehaviour
     {
 
         StartCoroutine("Contar_Dia");
-        
+
+
     }
 
     // Update is called once per frame
@@ -83,6 +84,11 @@ public class Calendario : MonoBehaviour
             txt_mes_ano.SetText(meses[mes] + " - " + Convert.ToString(ano));
             txt_dia.SetText("Dia - " + Convert.ToString(dia));
             txt_vel.SetText("Vel - " + Convert.ToString(vel) + "s / dia");
+
+            ControladorGame.gulag_game.machucados += 1;
+            ControladorGame.gulag_game.populacao += 1;
+            ControladorGame.gulag_game.dinheiro += 11.23f;
+            
 
             StartCoroutine(Contar_Dia());
 

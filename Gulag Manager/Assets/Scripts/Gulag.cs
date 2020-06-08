@@ -30,6 +30,6 @@ public class Gulag : MonoBehaviour
     public int medo ;
     public int populacao ;
     public int machucados ;
-    public int dinheiro ;
+    public float dinheiro ;
 
 }
