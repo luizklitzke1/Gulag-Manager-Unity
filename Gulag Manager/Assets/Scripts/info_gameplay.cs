@@ -9,13 +9,10 @@ public class info_gameplay : MonoBehaviour
 {
 
     public TextMeshProUGUI nome_gulag;
-    //public TextMeshProUGUI nome_rus;
-    //public TextMeshProUGUI descricao;
-    //TextMeshProUGUI deteccao;
-    //public TextMeshProUGUI nevasca;
-    //public TextMeshProUGUI recursos;
-    //public TextMeshProUGUI extracao;
-    //public TextMeshProUGUI clima;
+
+    public TextMeshProUGUI hurt;
+    public TextMeshProUGUI pop;
+    public TextMeshProUGUI mon;
 
     void Set_Data()
     {
@@ -72,7 +69,10 @@ public class info_gameplay : MonoBehaviour
 
         }
         */
-        nome_gulag.SetText(ControladorGame.gulag_game.nome);
+        nome_gulag.SetText(Convert.ToString (ControladorGame.gulag_game.nome));
+        hurt.SetText(Convert.ToString (ControladorGame.gulag_game.machucados));
+        pop.SetText(Convert.ToString (ControladorGame.gulag_game.populacao));
+        mon.SetText(Convert.ToString (ControladorGame.gulag_game.dinheiro));
 
 
     }
