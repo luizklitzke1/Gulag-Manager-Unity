@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\fps_counter.cs" />
      <Compile Include="Assets\Scripts\Buttons\button_SFX.cs" />
      <Compile Include="Assets\Scripts\Calendario.cs" />
      <Compile Include="Assets\Scripts\Controlador.cs" />
@@ -64,6 +63,7 @@
      <Compile Include="Assets\Scripts\Estruturas\est_recur.cs" />
      <Compile Include="Assets\Scripts\Estruturas\est_segur.cs" />
      <Compile Include="Assets\Scripts\Estruturas\Estrutura.cs" />
+     <Compile Include="Assets\Scripts\fps_counter.cs" />
      <Compile Include="Assets\Scripts\Gulag.cs" />
      <Compile Include="Assets\Scripts\gulag_info.cs" />
      <Compile Include="Assets\Scripts\info_gameplay.cs" />
@@ -71,6 +71,8 @@
      <Compile Include="Assets\Scripts\selecionar_gulag.cs" />
      <Compile Include="Assets\Scripts\set_vel.cs" />
      <Compile Include="Assets\Scripts\test_gameplay.cs" />
+     <Compile Include="Assets\Scripts\Upgrades\upgrade_info.cs" />
+     <Compile Include="Assets\Scripts\Upgrades\upgs_struct.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
