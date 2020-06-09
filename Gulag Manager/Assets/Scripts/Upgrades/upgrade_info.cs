@@ -6,7 +6,7 @@ using TMPro;
 
 public class upgrade_info : MonoBehaviour
 {
-
+    
     public TextMeshProUGUI nome_upg;
 
     public TextMeshProUGUI desc_upg;

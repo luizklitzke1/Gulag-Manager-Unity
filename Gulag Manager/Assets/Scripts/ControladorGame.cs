@@ -10,19 +10,34 @@ public class ControladorGame : MonoBehaviour
 {
 
     public static Gulag gulag_game = Controlador.gulag_atual;
-
-    public static Upgrade[] struct_upgs = new Upgrade[] {};
-    public static Upgrade[] medic_upgs = new Upgrade[] {};
-    public static Upgrade[] recur_upgs = new Upgrade[] {};
-    public static Upgrade[] segur_upgs = new Upgrade[] {};
+    
+    public  Upgrade[] medic_upgs = new Upgrade[] {};
+    public  Upgrade[] recur_upgs = new Upgrade[] {};
+    public  Upgrade[] segur_upgs = new Upgrade[] {};
 
     //Upgrades estrutura
-    public Upgrade upg_cimento = new Upgrade("Cimento do Scarpelly","Krlo, Scarpelly as 3am fazendo cimento",
+    public static Upgrade upg_cimento = new Upgrade("Cimento do Scarpelly","Krlo, Scarpelly as 3am fazendo cimento",
+                    420.69f,
+                    (new object[,] {{"carlos",13},}),
+                    (new object[,] {{"+Cimento do Scarpelly",1},})
+                    );
+    public static Upgrade upg_cimento2 = new Upgrade("Cimento do Scarpelly","Krlo, Scarpelly as 3am fazendo cimento",
+                    420.69f,
+                    (new object[,] {{"carlos",13},}),
+                    (new object[,] {{"+Cimento do Scarpelly",1},})
+                    );
+    public static Upgrade upg_cimento3 = new Upgrade("Cimento do Scarpelly","Krlo, Scarpelly as 3am fazendo cimento",
+                    420.69f,
+                    (new object[,] {{"carlos",13},}),
+                    (new object[,] {{"+Cimento do Scarpelly",1},})
+                    );
+    public static Upgrade upg_cimento4 = new Upgrade("Cimento do Scarpelly","Krlo, Scarpelly as 3am fazendo cimento",
                     420.69f,
                     (new object[,] {{"carlos",13},}),
                     (new object[,] {{"+Cimento do Scarpelly",1},})
                     );
 
+    public static Upgrade[] struct_upgs = new Upgrade[] {upg_cimento,upg_cimento2,upg_cimento3,upg_cimento4};
 
 
     // Start is called before the first frame update
