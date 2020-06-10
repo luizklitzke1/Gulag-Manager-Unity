@@ -1565,11 +1565,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lista: struct_upgs
   atual: {fileID: 0}
-  script1: {fileID: 0}
-  script2: {fileID: 0}
-  script3: {fileID: 0}
-  script4: {fileID: 0}
-  lista_upgs: []
+  script1: {fileID: 1996630317076037899}
+  script2: {fileID: 1020645783}
+  script3: {fileID: 1121808852}
+  script4: {fileID: 1192720585}
+  lista_esp: []
 --- !u!1 &304542609
 GameObject:
   m_ObjectHideFlags: 0
