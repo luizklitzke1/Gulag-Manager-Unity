@@ -6,36 +6,56 @@ using UnityEngine;
 public class get_upgrades : MonoBehaviour
 {
 
+    public ControladorGame controladorGame;
     public string lista;
 
 
 
-    public GameObject atual;
 
-    public upgrade_info script1;
-    public upgrade_info script2;
-    public upgrade_info script3;
-    public upgrade_info script4;
+    public Upg_info upg_info1;
+    public  Upgrade upg1;
 
-    public Upgrade[] lista_upgs;
-    public upgrade_info[] lista_esp;
+    public Upg_info upg_info2;
+    public  Upgrade upg2;
 
+    public Upg_info upg_info3;
+    public  Upgrade upg3;
+
+    public Upg_info upg_info4;
+    public  Upgrade upg4;
+
+
+    public Upgrade[] lista_esp;
+    public Upg_info[] lista_upgs_info;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject Controle = GameObject.Find("ControladorGame");
-        lista_upgs = Controle.GetComponent(lista as Upgrade[]);
 
-        upgrade_info[] lista_esp = { script1, script2, script3, script4 };
+        //upg1 = (ControladorGame.GetProperty(lista))[0];
+        //Upgrade upg1 = (Upgrade[])ControladorGame.GetType().GetField(lista).GetValue(ControladorGame);
 
 
-        for (int i = 0; i < 4; i++)
-        {
-            //lista_esp[i].nome_upg.SetText(lista_upgs[0].ToString());
+        Upg_info[] lista_upgs_info =  {upg_info1,upg_info2,upg_info3,upg_info4};
+
+        lista_esp  = (Upgrade[])controladorGame.GetType().GetField(lista).GetValue(controladorGame);
+
+        for (int i=0; i<4;i ++){
+
+            Upgrade upgrade = lista_esp[i];
+            lista_upgs_info[i].Set_Texts(upgrade.nome,upgrade.desc, upgrade.effects_txt_list);
+            Debug.Log(upgrade.nome);
+
+
         }
+
+        //this.GetType().GetProperty("newVar").SetValue(this, 38);
+
+
+
+        //upg_info[] lista_esp = {script1,script2,script3,script4};
 
 
         //for (int i=0; i<4; i++)
