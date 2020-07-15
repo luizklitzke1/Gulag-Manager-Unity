@@ -167,7 +167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -2 coisa triste
+  m_text: '- Dinheiro por causa da bomba'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dba76e38fb1c4f4381af52b28ae375c, type: 2}
   m_sharedMaterial: {fileID: 21604116271132896, guid: 2dba76e38fb1c4f4381af52b28ae375c,
@@ -237,12 +237,12 @@ MonoBehaviour:
   m_margin: {x: 1.331792, y: 2.5882475, z: 2.6575704, w: 1.7970713}
   m_textInfo:
     textComponent: {fileID: 20202557}
-    characterCount: 15
+    characterCount: 29
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 5
+    wordCount: 6
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1341,8 +1341,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1497,8 +1497,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4221,8 +4221,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6155,7 +6155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 37.70015, y: -429}
+  m_AnchoredPosition: {x: 37.700165, y: -429}
   m_SizeDelta: {x: 49.2, y: 38.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &938407402
@@ -10392,6 +10392,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1deafc8d45eb82469e0e5370709bc5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Est_recur: {fileID: 387467477}
+  Est_medic: {fileID: 1480970196}
+  Est_aloj: {fileID: 1927144984}
+  Est_segur: {fileID: 1790467857}
+  medic_upgs: []
+  recur_upgs: []
+  segur_upgs: []
+  aloj_upgs:
+  - {fileID: 11400000, guid: f0efa0f9f82b1d840b1faf6414134469, type: 2}
+  - {fileID: 11400000, guid: ac1e700ffc0237a4099b778c40f179d4, type: 2}
+  - {fileID: 11400000, guid: 60424777c56ca9847b59fce8b8a966f9, type: 2}
+  - {fileID: 11400000, guid: 6d8ba85f9c6973840a7a07716c6704b5, type: 2}
 --- !u!114 &1416722010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10791,8 +10803,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13554,8 +13566,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13675,11 +13687,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controladorGame: {fileID: 1416722009}
-  lista: struct_upgs
+  setor: aloj
   upg_info1: {fileID: 2499188261430141014}
+  upg1: {fileID: 0}
   upg_info2: {fileID: 1677702585}
+  upg2: {fileID: 0}
   upg_info3: {fileID: 1089252893}
+  upg3: {fileID: 0}
   upg_info4: {fileID: 120519674}
+  upg4: {fileID: 0}
+  lista_esp: []
   lista_upgs_info: []
 --- !u!1 &1880078429
 GameObject:
@@ -13837,8 +13854,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15132,8 +15149,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15220,6 +15237,7 @@ GameObject:
   - component: {fileID: 2499188261669056357}
   - component: {fileID: 2499188261669056356}
   - component: {fileID: 2499188261669056359}
+  - component: {fileID: 2499188261669056354}
   m_Layer: 5
   m_Name: btn_comprar
   m_TagString: Untagged
@@ -15227,6 +15245,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2499188261669056354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2499188261669056353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2998319c66e45984883fafc098f9d244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upg: {fileID: 0}
+  _struct: {fileID: 0}
 --- !u!114 &2499188261669056356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15436,32 +15468,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_MethodName: resize
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 2
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2499188261669056356}
-          m_MethodName: ClickSound
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - eventID: 1
     callback:
       m_PersistentCalls:
@@ -15518,8 +15528,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 11500000, guid: 2998319c66e45984883fafc098f9d244, type: 3}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15529,15 +15539,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: achar_gulag
-        m_Mode: 5
+      - m_Target: {fileID: 2499188261669056354}
+        m_MethodName: Aplly_upg
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Trofimovsk
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &2499188262012501229
@@ -15659,8 +15669,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
