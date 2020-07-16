@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class get_upgrades : MonoBehaviour
 {
@@ -9,21 +11,16 @@ public class get_upgrades : MonoBehaviour
     public ControladorGame controladorGame;
     public string setor;
 
-    public Upg_info upg_info1;
-    //public Upgrade upg1;
+    private string str_titulo;
+    private Color32 clr_titulo;
 
-    public Upg_info upg_info2;
-    //public Upgrade upg2;
 
-    public Upg_info upg_info3;
-    //public Upgrade upg3;
-
-    public Upg_info upg_info4;
-    //public Upgrade upg4;
-
+    public TextMeshProUGUI titulo;
 
     public List<Upgrade> lista_esp;
-    public Upg_info[] lista_upgs_info;
+
+    public List<Upg_info> lista_upgs_info;
+    public List<GameObject> objects_upg_info;
 
     string lista;
     string est;
@@ -34,29 +31,51 @@ public class get_upgrades : MonoBehaviour
     void Start()
     {
 
+        switch (setor)
+        {
+            case "recur":
+                str_titulo = "Recursos";
+                clr_titulo = new Color32(0,255,0,255);
+                break;
+
+            case "medic":
+                str_titulo = "Médico";
+                clr_titulo = new Color32(0,255,0,255);
+                break;
+
+            case "aloj":
+                str_titulo = "Alojamento";
+                clr_titulo = new Color32(255,255,255,255);
+                break;
+
+            case "segur":
+                str_titulo = "Segurança";
+                clr_titulo = new Color32(255,0,0,255);
+                break;
+            
+
+        }
+
+            
+        
+
+        titulo.SetText(str_titulo);
+        titulo.color = clr_titulo;
+
+        foreach (GameObject Gobj in objects_upg_info)
+        {
+            Gobj.SetActive(true);
+        }
+
         lista = setor + "_upgs";
-        //Debug.Log(lista);
         est = "Est_"+ setor;
-        //Debug.Log(est);
 
-        //upg1 = (ControladorGame.GetProperty(lista))[0];
-        //Upgrade upg1 = (Upgrade[])ControladorGame.GetType().GetField(lista).GetValue(ControladorGame);
-
-
-        //Upg_info[] lista_upgs_info =  {upg_info1,upg_info2,upg_info3,upg_info4};
 
         Get_Current();
 
 
-        //this.GetType().GetProperty("newVar").SetValue(this, 38);
-
-
-
-        //upg_info[] lista_esp = {script1,script2,script3,script4};
-
 
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -65,6 +84,7 @@ public class get_upgrades : MonoBehaviour
 
     }
 
+    //Atualiza os upgrades atualmente mostrados na tela
     void Get_Current()
     {
 
@@ -72,16 +92,25 @@ public class get_upgrades : MonoBehaviour
 
         Estrutura estrutura = (Estrutura)controladorGame.GetType().GetField(est).GetValue(controladorGame);
 
+        Debug.Log(lista_esp.Count);
 
-        for (int i=0; i<4;i ++){
+        for (int i=0; i<4 ;i ++)
+        {
 
-            Upgrade upgrade = lista_esp[i];
-            //Debug.Log(upgrade.nome+upgrade.desc);
-            //Debug.Log(estrutura.nome);
+            if (i < (lista_esp.Count))
+            {
+                Upgrade upgrade = lista_esp[i];
+                //Debug.Log(upgrade.nome+upgrade.desc);
+                //Debug.Log(estrutura.nome);
 
-            lista_upgs_info[i].Set_Value(upgrade.nome,upgrade.desc, upgrade.effects_txt_list,upgrade,estrutura,lista);
-            
+                lista_upgs_info[i].Set_Value(upgrade.nome,upgrade.desc, upgrade.effects_txt_list,upgrade,estrutura,lista);
+            }
 
+            else
+            {
+                objects_upg_info[i].SetActive(false);
+            }
+                
 
         }
     }
