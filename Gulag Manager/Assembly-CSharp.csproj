@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\basic_navigation.cs" />
      <Compile Include="Assets\Scripts\Buttons\button_SFX.cs" />
      <Compile Include="Assets\Scripts\Calendario.cs" />
      <Compile Include="Assets\Scripts\Controlador.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Scripts\info_gameplay.cs" />
      <Compile Include="Assets\Scripts\resize_img.cs" />
      <Compile Include="Assets\Scripts\selecionar_gulag.cs" />
+     <Compile Include="Assets\Scripts\set_upg_setor.cs" />
      <Compile Include="Assets\Scripts\set_vel.cs" />
      <Compile Include="Assets\Scripts\test_gameplay.cs" />
      <Compile Include="Assets\Scripts\Upgrades\apply_upg.cs" />

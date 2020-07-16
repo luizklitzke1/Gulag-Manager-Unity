@@ -14,7 +14,7 @@ public class apply_upg : MonoBehaviour
     
 
 
-    public void Aplly_upg()
+    public void Apply_upg()
     {
 
         Debug.Log(ap_struct.nome);
@@ -34,21 +34,11 @@ public class apply_upg : MonoBehaviour
                 List<Upgrade> upgs = (List<Upgrade>)controladorGame.GetType().GetField(lista).GetValue(controladorGame);
                 upgs.Remove(ap_upg);
 
-                /*
-                foreach (Upgrade upg in controladorGame.aloj_upgs)
-                {
-                    Debug.Log(upg.nome);
-                }
-                */
             }
             
         }
 
-        Debug.Log(ap_struct.nome);
-
-
     }
-
 
 
 }

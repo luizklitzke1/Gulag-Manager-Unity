@@ -40,7 +40,7 @@ public class get_upgrades : MonoBehaviour
 
             case "medic":
                 str_titulo = "Médico";
-                clr_titulo = new Color32(0,255,0,255);
+                clr_titulo = new Color32(255,0,255,255);
                 break;
 
             case "aloj":
@@ -56,9 +56,6 @@ public class get_upgrades : MonoBehaviour
 
         }
 
-            
-        
-
         titulo.SetText(str_titulo);
         titulo.color = clr_titulo;
 
@@ -70,9 +67,7 @@ public class get_upgrades : MonoBehaviour
         lista = setor + "_upgs";
         est = "Est_"+ setor;
 
-
         Get_Current();
-
 
 
     }
@@ -92,7 +87,6 @@ public class get_upgrades : MonoBehaviour
 
         Estrutura estrutura = (Estrutura)controladorGame.GetType().GetField(est).GetValue(controladorGame);
 
-        Debug.Log(lista_esp.Count);
 
         for (int i=0; i<4 ;i ++)
         {
@@ -113,6 +107,12 @@ public class get_upgrades : MonoBehaviour
                 
 
         }
+    }
+
+    //Reseta os valores -> Usado na mudança de setores
+    public void Reset()
+    {
+        Start();
     }
 
 }
