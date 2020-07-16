@@ -12,9 +12,12 @@ public class Upg_info : MonoBehaviour
     public TextMeshProUGUI effect_1;
     public TextMeshProUGUI effect_2;
 
+    public GameObject btn_comprar;
+
     //Definir os valores dos upgrades
-    public void Set_Texts(string nome, string desc, 
-                          string[] effects_txt_list)
+    public void Set_Value(string nome, string desc, 
+                          string[] effects_txt_list,
+                          Upgrade _upg, Estrutura _struct)
     {
         
         nome_upg.SetText(nome);
@@ -39,6 +42,12 @@ public class Upg_info : MonoBehaviour
         else{
             effect_2.color = new Color32(255, 0, 0, 255);
         }
+
+        btn_comprar.GetComponent<apply_upg>().ap_upg = _upg;
+        
+        btn_comprar.GetComponent<apply_upg>().ap_struct = _struct;
+
+
 
     }
 }

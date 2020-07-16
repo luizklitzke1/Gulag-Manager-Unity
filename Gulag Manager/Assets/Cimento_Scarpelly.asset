@@ -16,7 +16,7 @@ MonoBehaviour:
   desc: Carlos
   price: 24
   atrib_effects:
-  - carlos
+  - nome
   - 15
   effects_txt_list:
   - +Cimento do Scarpelly2

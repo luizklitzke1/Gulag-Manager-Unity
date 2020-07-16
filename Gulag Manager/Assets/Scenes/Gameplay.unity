@@ -1100,6 +1100,7 @@ MonoBehaviour:
   desc_upg: {fileID: 1498490263}
   effect_1: {fileID: 1080053786}
   effect_2: {fileID: 411762450}
+  btn_comprar: {fileID: 1763362531}
 --- !u!1 &166235866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,6 +2653,7 @@ GameObject:
   - component: {fileID: 414097784}
   - component: {fileID: 414097783}
   - component: {fileID: 414097782}
+  - component: {fileID: 414097789}
   m_Layer: 5
   m_Name: btn_comprar
   m_TagString: Untagged
@@ -2972,6 +2974,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414097780}
   m_CullTransparentMesh: 1
+--- !u!114 &414097789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414097780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2998319c66e45984883fafc098f9d244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ap_upg: {fileID: 0}
+  ap_struct: {fileID: 0}
 --- !u!1 &443272826
 GameObject:
   m_ObjectHideFlags: 0
@@ -5697,6 +5713,7 @@ GameObject:
   - component: {fileID: 873373019}
   - component: {fileID: 873373018}
   - component: {fileID: 873373017}
+  - component: {fileID: 873373024}
   m_Layer: 5
   m_Name: btn_comprar
   m_TagString: Untagged
@@ -6017,6 +6034,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873373015}
   m_CullTransparentMesh: 1
+--- !u!114 &873373024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873373015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2998319c66e45984883fafc098f9d244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ap_upg: {fileID: 0}
+  ap_struct: {fileID: 0}
 --- !u!1 &875914470
 GameObject:
   m_ObjectHideFlags: 0
@@ -7508,6 +7539,7 @@ MonoBehaviour:
   desc_upg: {fileID: 1818718571}
   effect_1: {fileID: 2136539748}
   effect_2: {fileID: 20202557}
+  btn_comprar: {fileID: 873373015}
 --- !u!1 &1100115030
 GameObject:
   m_ObjectHideFlags: 0
@@ -12402,6 +12434,7 @@ MonoBehaviour:
   desc_upg: {fileID: 229643725}
   effect_1: {fileID: 1366051200}
   effect_2: {fileID: 1003592524}
+  btn_comprar: {fileID: 414097780}
 --- !u!1 &1729183857
 GameObject:
   m_ObjectHideFlags: 0
@@ -12852,6 +12885,7 @@ GameObject:
   - component: {fileID: 1763362535}
   - component: {fileID: 1763362534}
   - component: {fileID: 1763362533}
+  - component: {fileID: 1763362540}
   m_Layer: 5
   m_Name: btn_comprar
   m_TagString: Untagged
@@ -13172,6 +13206,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763362531}
   m_CullTransparentMesh: 1
+--- !u!114 &1763362540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763362531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2998319c66e45984883fafc098f9d244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ap_upg: {fileID: 0}
+  ap_struct: {fileID: 0}
 --- !u!1 &1767193534
 GameObject:
   m_ObjectHideFlags: 0
@@ -13689,15 +13737,15 @@ MonoBehaviour:
   controladorGame: {fileID: 1416722009}
   setor: aloj
   upg_info1: {fileID: 2499188261430141014}
-  upg1: {fileID: 0}
   upg_info2: {fileID: 1677702585}
-  upg2: {fileID: 0}
   upg_info3: {fileID: 1089252893}
-  upg3: {fileID: 0}
   upg_info4: {fileID: 120519674}
-  upg4: {fileID: 0}
   lista_esp: []
-  lista_upgs_info: []
+  lista_upgs_info:
+  - {fileID: 2499188261430141014}
+  - {fileID: 1677702585}
+  - {fileID: 1089252893}
+  - {fileID: 120519674}
 --- !u!1 &1880078429
 GameObject:
   m_ObjectHideFlags: 0
@@ -15065,6 +15113,7 @@ MonoBehaviour:
   desc_upg: {fileID: 2499188262247551944}
   effect_1: {fileID: 7472793158946539715}
   effect_2: {fileID: 3900156939245872984}
+  btn_comprar: {fileID: 2499188261669056353}
 --- !u!1 &2499188261580625992
 GameObject:
   m_ObjectHideFlags: 0
@@ -15257,8 +15306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2998319c66e45984883fafc098f9d244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upg: {fileID: 0}
-  _struct: {fileID: 0}
+  ap_upg: {fileID: 0}
+  ap_struct: {fileID: 0}
 --- !u!114 &2499188261669056356
 MonoBehaviour:
   m_ObjectHideFlags: 0

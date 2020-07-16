@@ -16,7 +16,7 @@ MonoBehaviour:
   desc: "z\xE9"
   price: 0
   atrib_effects:
-  - carlos
+  - nome
   - 15
   effects_txt_list:
   - -Cimento do Scarpelly2

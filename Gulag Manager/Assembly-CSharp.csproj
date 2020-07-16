@@ -71,7 +71,7 @@
      <Compile Include="Assets\Scripts\selecionar_gulag.cs" />
      <Compile Include="Assets\Scripts\set_vel.cs" />
      <Compile Include="Assets\Scripts\test_gameplay.cs" />
-     <Compile Include="Assets\Scripts\Upgrades\aplly_upg.cs" />
+     <Compile Include="Assets\Scripts\Upgrades\apply_upg.cs" />
      <Compile Include="Assets\Scripts\Upgrades\get_upgrades.cs" />
      <Compile Include="Assets\Scripts\Upgrades\Upg_info.cs" />
      <Compile Include="Assets\Scripts\Upgrades\Upgrade.cs" />

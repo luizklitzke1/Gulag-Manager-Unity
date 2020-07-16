@@ -10,16 +10,16 @@ public class get_upgrades : MonoBehaviour
     public string setor;
 
     public Upg_info upg_info1;
-    public Upgrade upg1;
+    //public Upgrade upg1;
 
     public Upg_info upg_info2;
-    public Upgrade upg2;
+    //public Upgrade upg2;
 
     public Upg_info upg_info3;
-    public Upgrade upg3;
+    //public Upgrade upg3;
 
     public Upg_info upg_info4;
-    public Upgrade upg4;
+    //public Upgrade upg4;
 
 
     public List<Upgrade> lista_esp;
@@ -32,15 +32,15 @@ public class get_upgrades : MonoBehaviour
     {
 
         string lista = setor + "_upgs";
-        Debug.Log(lista);
+        //Debug.Log(lista);
         string est = "Est_"+ setor;
-        Debug.Log(est);
+        //Debug.Log(est);
 
         //upg1 = (ControladorGame.GetProperty(lista))[0];
         //Upgrade upg1 = (Upgrade[])ControladorGame.GetType().GetField(lista).GetValue(ControladorGame);
 
 
-        Upg_info[] lista_upgs_info =  {upg_info1,upg_info2,upg_info3,upg_info4};
+        //Upg_info[] lista_upgs_info =  {upg_info1,upg_info2,upg_info3,upg_info4};
 
         lista_esp  = (List<Upgrade>)controladorGame.GetType().GetField(lista).GetValue(controladorGame);
 
@@ -50,8 +50,11 @@ public class get_upgrades : MonoBehaviour
         for (int i=0; i<4;i ++){
 
             Upgrade upgrade = lista_esp[i];
-            lista_upgs_info[i].Set_Texts(upgrade.nome,upgrade.desc, upgrade.effects_txt_list);
-            //Debug.Log(upgrade.nome);
+            //Debug.Log(upgrade.nome+upgrade.desc);
+            //Debug.Log(estrutura.nome);
+
+            lista_upgs_info[i].Set_Value(upgrade.nome,upgrade.desc, upgrade.effects_txt_list,upgrade,estrutura);
+            
 
 
         }
