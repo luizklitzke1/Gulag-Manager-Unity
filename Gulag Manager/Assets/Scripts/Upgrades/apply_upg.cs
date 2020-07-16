@@ -8,6 +8,9 @@ public class apply_upg : MonoBehaviour
 
     public Upgrade ap_upg; 
     public Estrutura ap_struct;
+    public string lista;
+
+    public ControladorGame controladorGame;
     
 
 
@@ -27,6 +30,16 @@ public class apply_upg : MonoBehaviour
                 
                 ap_struct.GetType().GetField(ap_upg.atrib_effects[i]).SetValue(ap_struct, new_value);
                 Debug.Log("+--------------------Prop Nova Real: " + ap_struct.nome);
+
+                List<Upgrade> upgs = (List<Upgrade>)controladorGame.GetType().GetField(lista).GetValue(controladorGame);
+                upgs.Remove(ap_upg);
+
+                /*
+                foreach (Upgrade upg in controladorGame.aloj_upgs)
+                {
+                    Debug.Log(upg.nome);
+                }
+                */
             }
             
         }

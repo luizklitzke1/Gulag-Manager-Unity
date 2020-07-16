@@ -25,15 +25,18 @@ public class get_upgrades : MonoBehaviour
     public List<Upgrade> lista_esp;
     public Upg_info[] lista_upgs_info;
 
+    string lista;
+    string est;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        string lista = setor + "_upgs";
+        lista = setor + "_upgs";
         //Debug.Log(lista);
-        string est = "Est_"+ setor;
+        est = "Est_"+ setor;
         //Debug.Log(est);
 
         //upg1 = (ControladorGame.GetProperty(lista))[0];
@@ -41,6 +44,29 @@ public class get_upgrades : MonoBehaviour
 
 
         //Upg_info[] lista_upgs_info =  {upg_info1,upg_info2,upg_info3,upg_info4};
+
+        Get_Current();
+
+
+        //this.GetType().GetProperty("newVar").SetValue(this, 38);
+
+
+
+        //upg_info[] lista_esp = {script1,script2,script3,script4};
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        Get_Current();
+
+    }
+
+    void Get_Current()
+    {
 
         lista_esp  = (List<Upgrade>)controladorGame.GetType().GetField(lista).GetValue(controladorGame);
 
@@ -53,38 +79,11 @@ public class get_upgrades : MonoBehaviour
             //Debug.Log(upgrade.nome+upgrade.desc);
             //Debug.Log(estrutura.nome);
 
-            lista_upgs_info[i].Set_Value(upgrade.nome,upgrade.desc, upgrade.effects_txt_list,upgrade,estrutura);
+            lista_upgs_info[i].Set_Value(upgrade.nome,upgrade.desc, upgrade.effects_txt_list,upgrade,estrutura,lista);
             
 
 
         }
-
-
-        //this.GetType().GetProperty("newVar").SetValue(this, 38);
-
-
-
-        //upg_info[] lista_esp = {script1,script2,script3,script4};
-
-
-        //for (int i=0; i<4; i++)
-        {
-            // atual = lista_upgs[i];
-
-            //atual.nome_upg.SetText(atual.nome);
-            //atual.desc_upg.SetText(atual.desc);
-            //atual.effect_1.SetText(atual.effects_txt_list[0,0]);
-            //atual.effect_2.SetText(atual.effects_txt_list[1,0]);
-
-        }
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
 }

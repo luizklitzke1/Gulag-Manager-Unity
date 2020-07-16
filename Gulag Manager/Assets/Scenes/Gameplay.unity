@@ -2988,6 +2988,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ap_upg: {fileID: 0}
   ap_struct: {fileID: 0}
+  lista: 
+  controladorGame: {fileID: 0}
 --- !u!1 &443272826
 GameObject:
   m_ObjectHideFlags: 0
@@ -6048,6 +6050,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ap_upg: {fileID: 0}
   ap_struct: {fileID: 0}
+  lista: 
+  controladorGame: {fileID: 0}
 --- !u!1 &875914470
 GameObject:
   m_ObjectHideFlags: 0
@@ -10436,6 +10440,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ac1e700ffc0237a4099b778c40f179d4, type: 2}
   - {fileID: 11400000, guid: 60424777c56ca9847b59fce8b8a966f9, type: 2}
   - {fileID: 11400000, guid: 6d8ba85f9c6973840a7a07716c6704b5, type: 2}
+  - {fileID: 11400000, guid: 8e9e1e7d87f25f5469507a3ef27edcb3, type: 2}
 --- !u!114 &1416722010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13220,6 +13225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ap_upg: {fileID: 0}
   ap_struct: {fileID: 0}
+  lista: 
+  controladorGame: {fileID: 0}
 --- !u!1 &1767193534
 GameObject:
   m_ObjectHideFlags: 0
@@ -15308,6 +15315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ap_upg: {fileID: 0}
   ap_struct: {fileID: 0}
+  lista: 
+  controladorGame: {fileID: 1416722009}
 --- !u!114 &2499188261669056356
 MonoBehaviour:
   m_ObjectHideFlags: 0

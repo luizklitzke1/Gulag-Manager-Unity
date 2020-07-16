@@ -17,12 +17,12 @@ public class Upg_info : MonoBehaviour
     //Definir os valores dos upgrades
     public void Set_Value(string nome, string desc, 
                           string[] effects_txt_list,
-                          Upgrade _upg, Estrutura _struct)
+                          Upgrade _upg, Estrutura _struct,
+                          string _lista)
     {
         
         nome_upg.SetText(nome);
         desc_upg.SetText(desc);
-
 
         //upgrade.effects_txt_list[1,0].ToString(),Convert.ToInt32(upgrade.effects_txt_list[1,1]
 
@@ -47,7 +47,7 @@ public class Upg_info : MonoBehaviour
         
         btn_comprar.GetComponent<apply_upg>().ap_struct = _struct;
 
-
+        btn_comprar.GetComponent<apply_upg>().lista = _lista;
 
     }
 }
