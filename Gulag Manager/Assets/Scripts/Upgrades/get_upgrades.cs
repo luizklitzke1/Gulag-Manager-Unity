@@ -75,7 +75,6 @@ public class get_upgrades : MonoBehaviour
     void Update()
     {
 
-        Get_Current();
 
     }
 

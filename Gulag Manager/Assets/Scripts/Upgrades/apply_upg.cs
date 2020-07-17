@@ -11,7 +11,7 @@ public class apply_upg : MonoBehaviour
     public string lista;
 
     public ControladorGame controladorGame;
-    
+    public get_upgrades get_upgs; 
 
 
     public void Apply_upg()
@@ -33,6 +33,8 @@ public class apply_upg : MonoBehaviour
 
                 List<Upgrade> upgs = (List<Upgrade>)controladorGame.GetType().GetField(lista).GetValue(controladorGame);
                 upgs.Remove(ap_upg);
+                get_upgs.Reset();
+                
 
             }
             
