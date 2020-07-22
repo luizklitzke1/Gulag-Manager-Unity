@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\basic_navigation.cs" />
      <Compile Include="Assets\Scripts\Buttons\button_SFX.cs" />
+     <Compile Include="Assets\Scripts\calend_visual.cs" />
      <Compile Include="Assets\Scripts\Calendario.cs" />
      <Compile Include="Assets\Scripts\Controlador.cs" />
      <Compile Include="Assets\Scripts\ControladorGame.cs" />

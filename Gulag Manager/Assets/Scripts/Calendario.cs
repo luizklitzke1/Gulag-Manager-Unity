@@ -13,6 +13,15 @@ public class Calendario : MonoBehaviour
     public TextMeshProUGUI txt_mes_ano;
     public TextMeshProUGUI txt_vel;
 
+    public event OnMudarDiaDelegate OnMudarDia;
+    public delegate void OnMudarDiaDelegate(int dia, int dia_pos);
+
+    /*public class OnMudarDiaArgs: EventArgs
+    {
+        public int dia;
+        public int dia_pos;
+    }*/
+
     public int dia;
     private int dia_pos;
     public int semana;
@@ -73,6 +82,7 @@ public class Calendario : MonoBehaviour
             else
             {
                 dia ++;
+                OnMudarDia?.Invoke(dia,dia_pos);
             }
 
             if (mes == 13)
