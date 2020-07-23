@@ -52,19 +52,21 @@ public class calend_visual : MonoBehaviour
     }
     private void MudarDiaVisual(int dia, int dia_pos, int semana)
     {
-        Debug.Log("Dia: " + dia + " -   Dia_pos: " + dia_pos);
-        Debug.Log((semana-1)*7 + dia_pos);
-        Debug.Log((semana-1)*7 + dia_pos-1);
 
-        if (dia !=1)
+        if (dia != 1)
         {
             lista_dias[(semana-1)*7 + dia_pos].SetText("0");
             lista_dias[(semana-1)*7 + dia_pos-1].SetText("X");
+            
+            
+        }
+        else if (dia_pos == 0)
+        {
+            lista_dias[0].SetText("0");
         }
         else
         {
-            lista_dias[0].SetText("0");
-
+            lista_dias[(semana-1)*7 + dia_pos].SetText("0");
         }
 
         txt_dia.SetText("Dia - " + Convert.ToString(dia));

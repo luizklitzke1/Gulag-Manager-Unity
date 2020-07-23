@@ -24,12 +24,18 @@ public class Calendario : MonoBehaviour
 
     public int dia = 1;
     public int dia_pos;
+
+    private int carlos;
+
     public int semana = 1;
+
     public int mes = 1;
     public int ano = 1918;
 
-    public string[] meses = {"Janeiro","Fevereiro","Março","Abril","Maio","Junho",
+    public List<string> meses = new List<string>() {"Janeiro","Fevereiro","Março","Abril","Maio","Junho",
                      "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
+    
+    public List<int> meses_qtdias =new List<int>() {31,28,31,30,31,30,31,31,30,31,30,31};
 
     public float vel_base;
     public float vel;
@@ -64,14 +70,15 @@ public class Calendario : MonoBehaviour
         {
 
             yield return new WaitForSeconds(vel);
-    
-            if (dia == 28)
+
+
+            if (dia == (meses_qtdias[mes-1]+1))
             {
                 mes ++;
                 dia = 1;
-                dia_pos = 0;
                 semana = 1;
                 OnMudarMes?.Invoke(this, EventArgs.Empty);
+                OnMudarDia?.Invoke(dia,dia_pos,semana);
             }
             else
             {
@@ -105,7 +112,8 @@ public class Calendario : MonoBehaviour
 
         }
         else{
-            txt_vel.SetText("Vel - Pausado");
+            carlos ++;
+            txt_vel.SetText("Vel - Pausado" + carlos);
         }
 
         
