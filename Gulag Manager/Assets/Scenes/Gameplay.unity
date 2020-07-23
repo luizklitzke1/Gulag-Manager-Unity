@@ -2364,8 +2364,8 @@ Transform:
   - {fileID: 1735447549}
   - {fileID: 1457723355}
   - {fileID: 1367335834}
-  - {fileID: 921526582}
   - {fileID: 1699612753}
+  - {fileID: 921526582}
   m_Father: {fileID: 1936600774}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2382,6 +2382,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   calend: {fileID: 1597165370}
+  txt_dia: {fileID: 1174258342}
+  txt_mes_ano: {fileID: 971838857}
+  txt_vel: {fileID: 1735447547}
+  lista_dias:
+  - {fileID: 1201951131}
+  - {fileID: 970305565}
+  - {fileID: 205305212}
+  - {fileID: 1860859997}
+  - {fileID: 2049672403}
+  - {fileID: 55259523}
+  - {fileID: 1405890703}
+  - {fileID: 700471919}
+  - {fileID: 778687501}
+  - {fileID: 1741088970}
+  - {fileID: 2061461047}
+  - {fileID: 1849819246}
+  - {fileID: 33782802}
+  - {fileID: 1727731241}
+  - {fileID: 265981930}
+  - {fileID: 1280865717}
+  - {fileID: 125873599}
+  - {fileID: 1207224451}
+  - {fileID: 684095696}
+  - {fileID: 1445260895}
+  - {fileID: 884641738}
+  - {fileID: 705600710}
+  - {fileID: 1945199428}
+  - {fileID: 1923207950}
+  - {fileID: 879332263}
+  - {fileID: 1834983643}
+  - {fileID: 1167687390}
+  - {fileID: 437542997}
 --- !u!1 &265981928
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,7 +4844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d64ebcc0ec6fae4486a89fe189d6e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  new_vel: 5
+  new_vel: 15
   highlight_outline: {fileID: 26967779}
   outlines: []
 --- !u!114 &548234192
@@ -8111,7 +8143,7 @@ RectTransform:
   m_GameObject: {fileID: 921526581}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3.0722656}
-  m_LocalScale: {x: 0.028120872, y: 0.028120872, z: 0.028120868}
+  m_LocalScale: {x: 0.028120872, y: 0.028120873, z: 0.028120866}
   m_Children:
   - {fileID: 705600709}
   - {fileID: 1945199427}
@@ -8121,11 +8153,11 @@ RectTransform:
   - {fileID: 1167687389}
   - {fileID: 437542996}
   m_Father: {fileID: 255203098}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.491999, y: -5.1700006}
+  m_AnchoredPosition: {x: -6.491999, y: -5.169998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &938407400
@@ -8631,7 +8663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -6.6619997, y: -0.11}
+  m_AnchoredPosition: {x: -6.59, y: -0.11}
   m_SizeDelta: {x: 285.78, y: 60.978}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &971838856
@@ -14462,13 +14494,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd10fc2a462e42f4b8fefe624d10e418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt_dia: {fileID: 1174258342}
-  txt_mes_ano: {fileID: 971838857}
   txt_vel: {fileID: 1735447547}
-  dia: 0
-  semana: 0
-  mes: 0
+  dia: 1
+  dia_pos: 0
+  semana: 1
+  mes: 1
   ano: 1918
+  meses:
+  - Janeiro
+  - Fevereiro
+  - "Mar\xE7o"
+  - Abril
+  - Maio
+  - Junho
+  - Julho
+  - Agosto
+  - Setembro
+  - Outubro
+  - Novembro
+  - Dezembro
   vel_base: 5
   vel: 5
 --- !u!4 &1597165371
@@ -15659,7 +15703,7 @@ RectTransform:
   m_GameObject: {fileID: 1699612752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3.0722656}
-  m_LocalScale: {x: 0.028120872, y: 0.028120872, z: 0.028120868}
+  m_LocalScale: {x: 0.028120872, y: 0.028120873, z: 0.028120866}
   m_Children:
   - {fileID: 265981929}
   - {fileID: 1280865716}
@@ -15669,7 +15713,7 @@ RectTransform:
   - {fileID: 1445260894}
   - {fileID: 884641737}
   m_Father: {fileID: 255203098}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

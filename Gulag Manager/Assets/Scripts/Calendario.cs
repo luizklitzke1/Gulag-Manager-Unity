@@ -9,12 +9,12 @@ using UnityEngine.UI;
 public class Calendario : MonoBehaviour
 {
 
-    public TextMeshProUGUI txt_dia;
-    public TextMeshProUGUI txt_mes_ano;
-    public TextMeshProUGUI txt_vel;
-
     public event OnMudarDiaDelegate OnMudarDia;
-    public delegate void OnMudarDiaDelegate(int dia, int dia_pos);
+    public delegate void OnMudarDiaDelegate(int dia, int dia_pos, int semana);
+
+    public event EventHandler OnMudarMes;
+
+    public TextMeshProUGUI txt_vel;
 
     /*public class OnMudarDiaArgs: EventArgs
     {
@@ -22,13 +22,13 @@ public class Calendario : MonoBehaviour
         public int dia_pos;
     }*/
 
-    public int dia;
-    private int dia_pos;
-    public int semana;
+    public int dia = 1;
+    public int dia_pos;
+    public int semana = 1;
     public int mes = 1;
     public int ano = 1918;
 
-    private string[] meses = {"Janeiro","Fevereiro","Março","Abril","Maio","Junho",
+    public string[] meses = {"Janeiro","Fevereiro","Março","Abril","Maio","Junho",
                      "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
 
     public float vel_base;
@@ -38,6 +38,9 @@ public class Calendario : MonoBehaviour
     void Start()
     {
 
+        OnMudarMes?.Invoke(this, EventArgs.Empty);
+        OnMudarDia?.Invoke(dia,dia_pos,semana);
+        
         StartCoroutine("Contar_Dia");
 
 
@@ -50,17 +53,32 @@ public class Calendario : MonoBehaviour
         if (vel == 0){
             StartCoroutine("Contar_Dia");
         }
+        
 
     }
+    
 
     IEnumerator Contar_Dia()
     {
-
         if (vel != 0)
         {
 
             yield return new WaitForSeconds(vel);
-                
+    
+            if (dia == 28)
+            {
+                mes ++;
+                dia = 1;
+                dia_pos = 0;
+                semana = 1;
+                OnMudarMes?.Invoke(this, EventArgs.Empty);
+            }
+            else
+            {
+                OnMudarDia?.Invoke(dia,dia_pos,semana);
+                dia ++;
+            }
+
             if (dia_pos == 6)
             {
                 dia_pos = 0;
@@ -68,21 +86,7 @@ public class Calendario : MonoBehaviour
             }
             else
             {
-                dia_pos += 1;
-            }
-                
-
-            if (dia == 28)
-            {
-                mes ++;
-                dia = 1;
-                semana = 0;
-
-            }
-            else
-            {
-                dia ++;
-                OnMudarDia?.Invoke(dia,dia_pos);
+                dia_pos ++;
             }
 
             if (mes == 13)
@@ -90,10 +94,7 @@ public class Calendario : MonoBehaviour
                 ano ++;
                 mes = 1;
             }
-
-            txt_mes_ano.SetText(meses[mes] + " - " + Convert.ToString(ano));
-            txt_dia.SetText("Dia - " + Convert.ToString(dia));
-            txt_vel.SetText("Vel - " + Convert.ToString(vel) + "s / dia");
+            
 
             ControladorGame.gulag_game.machucados += 1;
             ControladorGame.gulag_game.populacao += 1;

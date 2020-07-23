@@ -2,28 +2,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class calend_visual : MonoBehaviour
 {
 
     public Calendario calend;
+
+    public TextMeshProUGUI txt_dia;
+    public TextMeshProUGUI txt_mes_ano;
+    public TextMeshProUGUI txt_vel;
+
+    public List<TextMeshProUGUI> lista_dias;
      
     // Start is called before the first frame update
     void Start()
     {
 
+        txt_mes_ano.SetText(calend.meses[calend.mes-1] + " - " + Convert.ToString(calend.ano));
+        txt_dia.SetText("Dia - " + Convert.ToString(calend.dia));
+        txt_vel.SetText("Vel - " + Convert.ToString(calend.vel) + "s / dia");
+
         calend.OnMudarDia +=  MudarDiaVisual;
+        calend.OnMudarMes += MudarMesVisual;  
         
     }
 
     // Update is called once per frame
     void Update()
+    
     {
+
+        txt_vel.SetText("Vel - " + Convert.ToString(calend.vel) + "s / dia");
         
     }
 
-    private void MudarDiaVisual(int dia, int dia_pos)
+
+    private void MudarMesVisual(object sender, EventArgs e)
+    {
+
+        txt_mes_ano.SetText(calend.meses[calend.mes-1] + " - " + Convert.ToString(calend.ano));
+
+        foreach (TextMeshProUGUI dia in lista_dias)
+        {
+            dia.SetText(" ");
+        }
+        
+    }
+    private void MudarDiaVisual(int dia, int dia_pos, int semana)
     {
         Debug.Log("Dia: " + dia + " -   Dia_pos: " + dia_pos);
+        Debug.Log((semana-1)*7 + dia_pos);
+        Debug.Log((semana-1)*7 + dia_pos-1);
+
+        if (dia !=1)
+        {
+            lista_dias[(semana-1)*7 + dia_pos].SetText("0");
+            lista_dias[(semana-1)*7 + dia_pos-1].SetText("X");
+        }
+        else
+        {
+            lista_dias[0].SetText("0");
+
+        }
+
+        txt_dia.SetText("Dia - " + Convert.ToString(dia));
+   
     }
 }
