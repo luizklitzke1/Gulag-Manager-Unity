@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class set_vel : MonoBehaviour
 {
-
     public float new_vel;
     public static Calendario Calendario;
 
@@ -23,20 +22,20 @@ public class set_vel : MonoBehaviour
         GameObject outline2 = GameObject.Find("select_2x");
         GameObject outline5 = GameObject.Find("select_5x");
 
-        outlines = new GameObject[] {outline0,outline1,outline2,outline5};
+        outlines = new GameObject[] { outline0, outline1, outline2, outline5 };
 
         GameObject calendario = GameObject.Find("Calendario");
 
         Calendario script_calend = calendario.GetComponent<Calendario>();
 
         Calendario = script_calend;
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Set_Vel()
@@ -44,13 +43,17 @@ public class set_vel : MonoBehaviour
 
         if (new_vel != 0)
         {
-            Calendario.vel = Calendario.vel_base/new_vel;
+
+            Calendario.vel = Calendario.vel_base / new_vel;
+
+
         }
         else
         {
+            // Calendario.foiDespausado = false;
             Calendario.vel = 0;
         }
-        
+
 
     }
 

@@ -1,14 +1,12 @@
-﻿
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Calendario : MonoBehaviour
 {
-
     public event OnMudarDiaDelegate OnMudarDia;
     public delegate void OnMudarDiaDelegate(int dia, int dia_pos, int semana);
 
@@ -23,7 +21,7 @@ public class Calendario : MonoBehaviour
     }*/
 
     public int dia = 1;
-    public int dia_pos;
+    public int dia_pos = 0;
 
     private int carlos;
 
@@ -32,10 +30,22 @@ public class Calendario : MonoBehaviour
     public int mes = 1;
     public int ano = 1918;
 
-    public List<string> meses = new List<string>() {"Janeiro","Fevereiro","Março","Abril","Maio","Junho",
-                     "Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"};
-    
-    public List<int> meses_qtdias =new List<int>() {31,28,31,30,31,30,31,31,30,31,30,31};
+    public List<string> meses = new List<string>() {
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro"
+    };
+
+    public List<int> meses_qtdias = new List<int>() { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
     public float vel_base;
     public float vel;
@@ -45,78 +55,71 @@ public class Calendario : MonoBehaviour
     {
 
         OnMudarMes?.Invoke(this, EventArgs.Empty);
-        OnMudarDia?.Invoke(dia,dia_pos,semana);
-        
-        StartCoroutine("Contar_Dia");
+        OnMudarDia?.Invoke(dia, dia_pos, semana);
 
-
+        IEnumerator coroInstance = Contar_Dia();
+        while (coroInstance.MoveNext())
+        {
+            StartCoroutine("Contar_Dia");
+        }
     }
-
     // Update is called once per frame
     void Update()
     {
 
-        if (vel == 0){
-            StartCoroutine("Contar_Dia");
-        }
-        
 
     }
-    
 
     IEnumerator Contar_Dia()
     {
+        Debug.Log("Pai ta on");
+        yield return new WaitForSeconds(vel);
         if (vel != 0)
         {
-
-            yield return new WaitForSeconds(vel);
-
-
-            if (dia == (meses_qtdias[mes-1]+1))
+            if (dia == (meses_qtdias[mes - 1] + 1))
             {
-                mes ++;
+                mes++;
                 dia = 1;
                 semana = 1;
                 OnMudarMes?.Invoke(this, EventArgs.Empty);
-                OnMudarDia?.Invoke(dia,dia_pos,semana);
+                OnMudarDia?.Invoke(dia, dia_pos, semana);
+                dia++;
             }
             else
             {
-                OnMudarDia?.Invoke(dia,dia_pos,semana);
-                dia ++;
+                OnMudarDia?.Invoke(dia, dia_pos, semana);
+                Debug.Log(Time.time.ToString("F2"));
+
+                dia++;
             }
 
             if (dia_pos == 6)
             {
                 dia_pos = 0;
-                semana ++;
+                semana++;
             }
             else
             {
-                dia_pos ++;
+                dia_pos++;
             }
 
             if (mes == 13)
             {
-                ano ++;
+                ano++;
                 mes = 1;
             }
-            
 
             ControladorGame.gulag_game.machucados += 1;
             ControladorGame.gulag_game.populacao += 1;
             ControladorGame.gulag_game.dinheiro += 11.23f;
-            
-
-            StartCoroutine(Contar_Dia());
 
         }
-        else{
-            carlos ++;
+        else
+        {
+            carlos++;
             txt_vel.SetText("Vel - Pausado" + carlos);
         }
-
-        
+        StartCoroutine(Contar_Dia());
 
     }
 
