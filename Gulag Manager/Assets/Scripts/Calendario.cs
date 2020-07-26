@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Calendario : MonoBehaviour
 {
+    public bool firstTime = true;
     public event OnMudarDiaDelegate OnMudarDia;
     public delegate void OnMudarDiaDelegate(int dia, int dia_pos, int semana);
 
@@ -50,6 +51,8 @@ public class Calendario : MonoBehaviour
     public float vel_base;
     public float vel;
 
+    public float internalVel = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,23 +60,33 @@ public class Calendario : MonoBehaviour
         OnMudarMes?.Invoke(this, EventArgs.Empty);
         OnMudarDia?.Invoke(dia, dia_pos, semana);
 
-        IEnumerator coroInstance = Contar_Dia();
-        while (coroInstance.MoveNext())
-        {
-            StartCoroutine("Contar_Dia");
-        }
+        StartCoroutine("Contar_Dia");
+
+        //IEnumerator coroInstance = Contar_Dia ();
+        //while (coroInstance.MoveNext ()) {
+
+        //}
     }
     // Update is called once per frame
     void Update()
     {
 
-
     }
 
     IEnumerator Contar_Dia()
     {
-        Debug.Log("Pai ta on");
-        yield return new WaitForSeconds(vel);
+        if (firstTime == false)
+        {
+            Debug.Log("Pai lembro que marcha é coisa de viado");
+            internalVel = vel;
+        }
+        else
+        {
+            Debug.Log("Pai ta engatado na primeira");
+            firstTime = false;
+        }
+
+        yield return new WaitForSeconds(internalVel);
         if (vel != 0)
         {
             if (dia == (meses_qtdias[mes - 1] + 1))
@@ -120,7 +133,5 @@ public class Calendario : MonoBehaviour
             txt_vel.SetText("Vel - Pausado" + carlos);
         }
         StartCoroutine(Contar_Dia());
-
     }
-
 }
