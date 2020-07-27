@@ -24,8 +24,6 @@ public class Calendario : MonoBehaviour
     public int dia = 1;
     public int dia_pos = 0;
 
-    private int carlos;
-
     public int semana = 1;
 
     public int mes = 1;
@@ -129,8 +127,7 @@ public class Calendario : MonoBehaviour
         }
         else
         {
-            carlos++;
-            txt_vel.SetText("Vel - Pausado" + carlos);
+            txt_vel.SetText("Vel - Pausado");
         }
         StartCoroutine(Contar_Dia());
     }
