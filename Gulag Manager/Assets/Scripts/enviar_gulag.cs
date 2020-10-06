@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enviar_gulag : MonoBehaviour
 {
-    
+
     public void achar_gulag (string nome)
     {
         GameObject gulag = GameObject.Find(nome);

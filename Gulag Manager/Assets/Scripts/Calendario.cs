@@ -75,12 +75,10 @@ public class Calendario : MonoBehaviour
     {
         if (firstTime == false)
         {
-            Debug.Log("Pai lembro que marcha é coisa de viado");
             internalVel = vel;
         }
         else
         {
-            Debug.Log("Pai ta engatado na primeira");
             firstTime = false;
         }
 
@@ -99,7 +97,6 @@ public class Calendario : MonoBehaviour
             else
             {
                 OnMudarDia?.Invoke(dia, dia_pos, semana);
-                Debug.Log(Time.time.ToString("F2"));
 
                 dia++;
             }
