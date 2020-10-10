@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scripts\gulag_info.cs" />
      <Compile Include="Assets\Scripts\info_gameplay.cs" />
      <Compile Include="Assets\Scripts\resize_img.cs" />
+     <Compile Include="Assets\Scripts\script_abler.cs" />
      <Compile Include="Assets\Scripts\selecionar_gulag.cs" />
      <Compile Include="Assets\Scripts\set_upg_setor.cs" />
      <Compile Include="Assets\Scripts\set_vel.cs" />

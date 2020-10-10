@@ -1,0 +1,19 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class script_abler : MonoBehaviour
+{
+    public MonoBehaviour script;
+
+    public void unable_script (){
+        script.enabled = false;
+    }
+
+    public void able_script (){
+        script.enabled = true;
+    }
+
+}
+
+
