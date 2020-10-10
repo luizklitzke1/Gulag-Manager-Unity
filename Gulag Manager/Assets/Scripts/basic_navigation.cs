@@ -12,6 +12,7 @@ public class basic_navigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown("escape"))
         {
             obj1.SetActive(false);
