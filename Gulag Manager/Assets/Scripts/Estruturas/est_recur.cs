@@ -7,6 +7,7 @@ public class est_recur : Estrutura
 
     public int estoque;
     public int vel_estraxt = 10;
+    public int total_injur = 0;
     public float risc_injur = .2f;
 
     public static est_recur Recursos;

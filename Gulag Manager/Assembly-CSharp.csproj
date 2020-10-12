@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Estruturas\est_recur.cs" />
      <Compile Include="Assets\Scripts\Estruturas\est_segur.cs" />
      <Compile Include="Assets\Scripts\Gulag.cs" />
+     <Compile Include="Assets\Scripts\Status\Get_Status_Recursos.cs" />
      <Compile Include="Assets\Scripts\Upgrades\Upg_info.cs" />
      <Compile Include="Assets\Scripts\Upgrades\Upgrade.cs" />
      <Compile Include="Assets\Scripts\Upgrades\apply_upg.cs" />
