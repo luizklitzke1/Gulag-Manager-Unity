@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e9ea9c4a64bf7469ca7c41bfb6c09f, type: 3}
   m_Name: Cimento_Scarpelly 2
   m_EditorClassIdentifier: 
-  nome: Pau penis
-  desc: Jonas
+  nome: Santa Catarina
+  desc: Muda para o estado superior
   price: 42
   atrib_effects:
-  - nome
-  - 15
+  - estado
+  - 47
   effects_txt_list:
-  - +Cimento do Scarpelly2
+  - +DD MEC
   - 1
-  - '- Dinheiro por causa da bomba'
-  - 0
+  - 
+  - 1

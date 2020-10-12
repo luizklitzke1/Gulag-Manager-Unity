@@ -16,10 +16,10 @@ MonoBehaviour:
   desc: "Porra, grande descri\xE7\xE3o comprida mano"
   price: 23
   atrib_effects:
-  - nome
-  - nome1
-  - nome
-  - nome2
+  - level
+  - 1
+  - level
+  - 4
   effects_txt_list:
   - -Efeito
   - 0

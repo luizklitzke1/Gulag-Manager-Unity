@@ -5,8 +5,6 @@ using UnityEngine;
 public class est_aloj : Estrutura
 {
 
-    public int qual_com = 1;
-    public int vel_extract = 10;
     public static est_aloj Alojamento;
 
     // Start is called before the first frame update

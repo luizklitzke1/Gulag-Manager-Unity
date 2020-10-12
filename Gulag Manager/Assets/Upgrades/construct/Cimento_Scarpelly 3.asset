@@ -16,7 +16,7 @@ MonoBehaviour:
   desc: Cleber
   price: 111
   atrib_effects:
-  - nome
+  - level
   - 15
   effects_txt_list:
   - +Cimento do Scarpelly2

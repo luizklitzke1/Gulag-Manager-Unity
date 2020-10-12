@@ -16,7 +16,7 @@ MonoBehaviour:
   desc: "Compra novinha pra n\xE3o dar infec\xE7\xE3o"
   price: 43
   atrib_effects:
-  - nome
+  - level
   - 3
   effects_txt_list:
   - "-Chance de contrair doen\xE7a"
