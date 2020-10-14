@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class Calendario : MonoBehaviour
 {
+
+    public GameObject gameplaymain;
     public bool firstTime = true;
     public event OnMudarDiaDelegate OnMudarDia;
     public delegate void OnMudarDiaDelegate(int dia, int dia_pos, int semana);
@@ -82,8 +84,9 @@ public class Calendario : MonoBehaviour
             firstTime = false;
         }
 
+
         yield return new WaitForSeconds(internalVel);
-        if (vel != 0)
+        if (vel != 0 && gameplaymain.activeSelf)
         {
             if (dia == (meses_qtdias[mes - 1] + 1))
             {
