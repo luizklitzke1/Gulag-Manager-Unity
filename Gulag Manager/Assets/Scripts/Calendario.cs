@@ -13,7 +13,8 @@ public class Calendario : MonoBehaviour
     public event OnMudarDiaDelegate OnMudarDia;
     public delegate void OnMudarDiaDelegate(int dia, int dia_pos, int semana);
 
-    public event EventHandler OnMudarMes;
+    public delegate void OnMudarMesDelegate(int mes);
+    public event OnMudarMesDelegate OnMudarMes;
 
     public TextMeshProUGUI txt_vel;
 
@@ -57,7 +58,7 @@ public class Calendario : MonoBehaviour
     void Start()
     {
 
-        OnMudarMes?.Invoke(this, EventArgs.Empty);
+        OnMudarMes?.Invoke(mes);
         OnMudarDia?.Invoke(dia, dia_pos, semana);
 
         StartCoroutine("Contar_Dia");
@@ -93,7 +94,7 @@ public class Calendario : MonoBehaviour
                 mes++;
                 dia = 1;
                 semana = 1;
-                OnMudarMes?.Invoke(this, EventArgs.Empty);
+                OnMudarMes?.Invoke(mes);
                 OnMudarDia?.Invoke(dia, dia_pos, semana);
                 dia++;
             }

@@ -39,7 +39,7 @@ public class calend_visual : MonoBehaviour
     }
 
 
-    private void MudarMesVisual(object sender, EventArgs e)
+    private void MudarMesVisual(int mes)
     {
 
         txt_mes_ano.SetText(calend.meses[calend.mes - 1] + " - " + Convert.ToString(calend.ano));

@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\basic_navigation.cs" />
      <Compile Include="Assets\Scripts\calend_visual.cs" />
      <Compile Include="Assets\Scripts\enviar_gulag.cs" />
+     <Compile Include="Assets\Scripts\events\GameEventsHandler.cs" />
      <Compile Include="Assets\Scripts\fps_counter.cs" />
      <Compile Include="Assets\Scripts\gulag_info.cs" />
      <Compile Include="Assets\Scripts\info_gameplay.cs" />
