@@ -25,7 +25,7 @@ public class Event_setter : MonoBehaviour
     public GameObject btn2;
     
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
 
         btn1.SetActive(true);
@@ -52,9 +52,5 @@ public class Event_setter : MonoBehaviour
     }
   
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

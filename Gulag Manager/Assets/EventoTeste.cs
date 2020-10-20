@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class EventoNeve : MonoBehaviour
+public class EventoTeste : MonoBehaviour
 {
 
     public GameEventsHandler handler;
@@ -18,23 +18,22 @@ public class EventoNeve : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-                
+
         EventTrigger trigger = btn2.AddComponent<EventTrigger>();
         var pointerDown = new EventTrigger.Entry();
         pointerDown.eventID = EventTriggerType.PointerDown;
 
-        pointerDown.callback.AddListener((e) => Neve());
+        pointerDown.callback.AddListener((e) => Teste());
         trigger.triggers.Add(pointerDown);
 
     }
 
-    void Neve(){
+    void Teste(){
         
 
         if (obj.activeSelf){
-            Debug.Log("TA NEVANDO!"); 
             obj.SetActive(false);
-            handler.DesativarEvento("EventoNeve");
+            handler.DesativarEvento("EventoTeste");
         }
         else{
         }

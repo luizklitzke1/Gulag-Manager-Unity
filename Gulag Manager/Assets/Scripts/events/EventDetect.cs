@@ -23,31 +23,46 @@ public class EventDetect : MonoBehaviour
         var pointerDown = new EventTrigger.Entry();
         pointerDown.eventID = EventTriggerType.PointerDown;
 
-        //pointerDown.callback.AddListener((e) => Debug.Log("CArlos"));
         pointerDown.callback.AddListener((e) => Carlos());
         trigger.triggers.Add(pointerDown);
+
+        //////////////////////////////////////////////////////////////////
+
+        EventTrigger trigger2 = btn2.AddComponent<EventTrigger>();
+        var pointerDown2 = new EventTrigger.Entry();
+        pointerDown2.eventID = EventTriggerType.PointerDown;
+
+        pointerDown2.callback.AddListener((e) => Carlos2());
+        trigger2.triggers.Add(pointerDown2);
 
     }
 
     void Carlos(){
         
 
-        Debug.Log((obj.activeSelf));
         if (obj.activeSelf){
-            Debug.Log("Fez o bang"); 
             obj.SetActive(false);
             handler.DesativarEvento("EventoDetec");
         }
         else{
-             Debug.Log("Não faz mais!");
+
         }
         
        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+     void Carlos2(){
         
+        if (obj.activeSelf){
+            obj.SetActive(false);
+            handler.DesativarEvento("EventoDetec");
+        }
+        else{
+
+        }
+        
+       
     }
+
+
 }

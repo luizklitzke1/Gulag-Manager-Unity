@@ -25,6 +25,9 @@ public class GameEventsHandler : MonoBehaviour
     //Lista com os game objects dos eventos
     public List<GameObject> eventos_objs;
 
+    //Lista que serve como fila para os eventos
+    public List<GameObject> fila_eventos;
+
     //Som do alerta
     public AudioSource myFx;
     public AudioClip alertFx;
@@ -41,6 +44,23 @@ public class GameEventsHandler : MonoBehaviour
         
     }
 
+    void Update(){
+        
+        if (fila_eventos.Count()>0 && !(fila_eventos[0].activeSelf)){
+            Debug.Log(fila_eventos[0].name);
+            AtivarEvento(fila_eventos[0].name);
+        }
+       
+
+    }
+
+    //Adicionar eventos para a lista de execução
+    public void AdicionarEvento(string nome){
+         GameObject temp = eventos_objs.Where(obj => obj.name == nome).SingleOrDefault();
+         fila_eventos.Add(temp);
+
+    }
+
     //Ativar um evento e o popup
     public void AtivarEvento(string nome){
         GameObject temp = eventos_objs.Where(obj => obj.name == nome).SingleOrDefault();
@@ -53,12 +73,16 @@ public class GameEventsHandler : MonoBehaviour
 
     //Desativar um evento e o popup
     public void DesativarEvento(string nome){
+
         GameObject temp = eventos_objs.Where(obj => obj.name == nome).SingleOrDefault();
+        fila_eventos.Remove(temp);
 
         gameplaymain.SetActive(true);
         //estrutuas.SetActive(true);
-        popup.SetActive(false);
         temp.SetActive(false);
+        popup.SetActive(false);
+
+        
     }
 
     //Eventos com chance diaria
@@ -67,19 +91,7 @@ public class GameEventsHandler : MonoBehaviour
 
         //Debug.Log("Mudou de dia! Dia: " + Convert.ToString(dia));
         
-        //Probabilidade de nevasca (de 0-5)
-        if (gulag.r_nevasca > 0){
-            int prob_neve = random.Next(5);  
-            Debug.Log(Convert.ToString(prob_neve)+ " - " + Convert.ToString(gulag.r_nevasca));
-            if (prob_neve <= gulag.r_nevasca){
 
-                AtivarEvento("EventoNeve"); 
-
-            }
-       
-        }
-
-        /*
         //Probabilidade de detecção (de 0-50)
         if (gulag.r_detec > 0){
             int prob_detec = random.Next(50);  
@@ -87,12 +99,23 @@ public class GameEventsHandler : MonoBehaviour
             if (prob_detec <= gulag.r_detec){
                 Debug.Log("DETECTADO!");
 
-                AtivarEvento("EventoDetec");         
+                AdicionarEvento("EventoDetec");         
                 
             }
         }
-        */
 
+        //Probabilidade de nevasca (de 0-5)
+        if (gulag.r_nevasca > 0){
+            int prob_neve = random.Next(5);  
+            Debug.Log(Convert.ToString(prob_neve)+ " - " + Convert.ToString(gulag.r_nevasca));
+            if (prob_neve <= gulag.r_nevasca){
+
+                AdicionarEvento("EventoNeve"); 
+                AdicionarEvento("EventoTeste"); 
+
+            }
+       
+        }
 
     }
 

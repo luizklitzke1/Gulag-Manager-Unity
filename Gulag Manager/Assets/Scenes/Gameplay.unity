@@ -8914,13 +8914,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   evento: {fileID: 11400000, guid: 5ee157740bdb6304ba1f9dd5d1c3f3c7, type: 2}
   image: {fileID: 57930040}
-  img_event: {fileID: 21300000, guid: 2ba1fa5064824324097824c251b155e8, type: 3}
+  img_event: {fileID: 21300000, guid: cf3af778c60419442848c974c7162519, type: 3}
   titulo: {fileID: 2028059329}
   desc: {fileID: 1466686085}
   btn1txt: {fileID: 1587659470}
   btn2txt: {fileID: 1784015757}
-  btn1: {fileID: 0}
-  btn2: {fileID: 0}
+  btn1: {fileID: 2009973727}
+  btn2: {fileID: 1689326765}
 --- !u!114 &532616221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21611,6 +21611,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1318243002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1318243003}
+  - component: {fileID: 1318243005}
+  - component: {fileID: 1318243004}
+  m_Layer: 5
+  m_Name: EventoTeste
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1318243003
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318243002}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1787395697}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1318243004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318243002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c448badd44ccf64a8f3ba664baec69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handler: {fileID: 1787395696}
+  obj: {fileID: 1318243002}
+  btn1: {fileID: 2009973727}
+  btn2: {fileID: 1689326765}
+--- !u!114 &1318243005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318243002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b36d161678fc1141ba9fc0c95fd895a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento: {fileID: 11400000, guid: da419fa60bc30fd40b1c299d9f499b47, type: 2}
+  image: {fileID: 57930040}
+  img_event: {fileID: 21300000, guid: 847570e39c077a445b44878cc587b2d4, type: 3}
+  titulo: {fileID: 2028059329}
+  desc: {fileID: 1466686085}
+  btn1txt: {fileID: 1587659470}
+  btn2txt: {fileID: 1784015757}
+  btn1: {fileID: 2009973727}
+  btn2: {fileID: 1689326765}
 --- !u!1 &1342257634
 GameObject:
   m_ObjectHideFlags: 0
@@ -23648,7 +23722,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476070652}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -27159,7 +27233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1688159121
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29583,7 +29657,7 @@ GameObject:
   - component: {fileID: 1787395696}
   - component: {fileID: 1787395698}
   m_Layer: 5
-  m_Name: GameEvents
+  m_Name: GameEventsHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29607,6 +29681,8 @@ MonoBehaviour:
   eventos_objs:
   - {fileID: 532616218}
   - {fileID: 2047642902}
+  - {fileID: 1318243002}
+  fila_eventos: []
   myFx: {fileID: 1787395698}
   alertFx: {fileID: 8300000, guid: 59866ed18b316084290ae97dff4b2a0a, type: 3}
 --- !u!224 &1787395697
@@ -29622,6 +29698,7 @@ RectTransform:
   m_Children:
   - {fileID: 532616219}
   - {fileID: 2047642905}
+  - {fileID: 1318243003}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30963,7 +31040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1936600774
 Transform:
   m_ObjectHideFlags: 0
