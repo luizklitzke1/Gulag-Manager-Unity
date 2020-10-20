@@ -64,6 +64,9 @@
      <Compile Include="Assets\Scripts\Estruturas\est_med.cs" />
      <Compile Include="Assets\Scripts\Estruturas\est_recur.cs" />
      <Compile Include="Assets\Scripts\Estruturas\est_segur.cs" />
+     <Compile Include="Assets\Scripts\Events\EventPopUp.cs" />
+     <Compile Include="Assets\Scripts\Events\Evento.cs" />
+     <Compile Include="Assets\Scripts\Events\GameEventsHandler.cs" />
      <Compile Include="Assets\Scripts\Gulag.cs" />
      <Compile Include="Assets\Scripts\Status\Get_Status_Construct.cs" />
      <Compile Include="Assets\Scripts\Status\Get_Status_Recursos.cs" />
@@ -75,7 +78,6 @@
      <Compile Include="Assets\Scripts\basic_navigation.cs" />
      <Compile Include="Assets\Scripts\calend_visual.cs" />
      <Compile Include="Assets\Scripts\enviar_gulag.cs" />
-     <Compile Include="Assets\Scripts\events\GameEventsHandler.cs" />
      <Compile Include="Assets\Scripts\fps_counter.cs" />
      <Compile Include="Assets\Scripts\gulag_info.cs" />
      <Compile Include="Assets\Scripts\info_gameplay.cs" />
