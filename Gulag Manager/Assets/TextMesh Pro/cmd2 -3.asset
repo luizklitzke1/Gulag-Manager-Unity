@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: cmd2 -3
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -1932506074
   material: {fileID: 21604116271132896}
-  materialHashCode: 0
+  materialHashCode: 882777581
   m_Version: 1.1.0
   m_SourceFontFileGUID: 31ff04c1f8c34334c901e18b56b9c5d9
   m_SourceFontFile_EditorRef: {fileID: 0}
@@ -4954,6 +4954,8 @@ Texture2D:
   m_TextureFormat: 1
   m_MipCount: 1
   m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_IsPreProcessed: 0
   m_StreamingMipmaps: 0
   m_StreamingMipmapsPriority: 0
   m_AlphaIsTransparency: 0

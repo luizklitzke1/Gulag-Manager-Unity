@@ -64,8 +64,11 @@
      <Compile Include="Assets\Scripts\Estruturas\est_med.cs" />
      <Compile Include="Assets\Scripts\Estruturas\est_recur.cs" />
      <Compile Include="Assets\Scripts\Estruturas\est_segur.cs" />
+     <Compile Include="Assets\Scripts\Events\EventDetect.cs" />
      <Compile Include="Assets\Scripts\Events\EventPopUp.cs" />
+     <Compile Include="Assets\Scripts\Events\Event_setter.cs" />
      <Compile Include="Assets\Scripts\Events\Evento.cs" />
+     <Compile Include="Assets\Scripts\Events\EventoNeve.cs" />
      <Compile Include="Assets\Scripts\Events\GameEventsHandler.cs" />
      <Compile Include="Assets\Scripts\Gulag.cs" />
      <Compile Include="Assets\Scripts\Status\Get_Status_Construct.cs" />
