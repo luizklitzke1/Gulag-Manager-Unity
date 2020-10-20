@@ -19,9 +19,6 @@ public class ControladorGame : MonoBehaviour
     public  List<Upgrade> recur_upgs;
     public  List<Upgrade> segur_upgs;
     public  List<Upgrade> aloj_upgs;
-
-    
-
     
 
 
