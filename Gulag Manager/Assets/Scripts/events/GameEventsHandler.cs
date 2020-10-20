@@ -25,6 +25,9 @@ public class GameEventsHandler : MonoBehaviour
     //Lista com os game objects dos eventos
     public List<GameObject> eventos_objs;
 
+    //Som do alerta
+    public AudioSource myFx;
+    public AudioClip alertFx;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +45,7 @@ public class GameEventsHandler : MonoBehaviour
     public void AtivarEvento(string nome){
         GameObject temp = eventos_objs.Where(obj => obj.name == nome).SingleOrDefault();
 
+        myFx.PlayOneShot (alertFx);
         gameplaymain.SetActive(false);
         popup.SetActive(true);
         temp.SetActive(true);

@@ -19,7 +19,7 @@ public class EventoNeve : MonoBehaviour
     void Start()
     {
         
-        EventTrigger trigger = btn1.AddComponent<EventTrigger>();
+        EventTrigger trigger = btn2.AddComponent<EventTrigger>();
         var pointerDown = new EventTrigger.Entry();
         pointerDown.eventID = EventTriggerType.PointerDown;
 

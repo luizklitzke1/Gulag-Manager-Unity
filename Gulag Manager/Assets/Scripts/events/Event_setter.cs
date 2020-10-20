@@ -20,15 +20,29 @@ public class Event_setter : MonoBehaviour
     public TextMeshProUGUI desc;
     public TextMeshProUGUI btn1txt;
     public TextMeshProUGUI btn2txt;
+
+    public GameObject btn1;
+    public GameObject btn2;
     
     // Start is called before the first frame update
     void Start()
     {
 
+        btn1.SetActive(true);
+        btn2.SetActive(true);
+
         //Seta os textos do popup
         titulo.SetText(evento.titulo);
         desc.SetText(evento.desc);
-        btn1txt.SetText(evento.txt_op1);
+
+        if (evento.txt_op1 != "ok"){
+            btn1txt.SetText(evento.txt_op1);
+            
+        }
+        else{
+            btn1.SetActive(false);
+        }
+        
         btn2txt.SetText(evento.txt_op2);
 
         //Seta a img
