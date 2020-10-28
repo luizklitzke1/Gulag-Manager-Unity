@@ -18,7 +18,7 @@ public class GameEventsHandler : MonoBehaviour
     //public GameObject estrutuas;
 
     //Gulag atual
-    private  Gulag gulag;
+    private Gulag gulag;
 
     System.Random random = new System.Random();
 
@@ -37,6 +37,8 @@ public class GameEventsHandler : MonoBehaviour
     {
 
         gulag = ControladorGame.gulag_game;
+
+        Debug.Log(gulag.extracao_tipo);
 
         //Escreve as funções nos gatilhos do calend
         calend.OnMudarDia += EventosDiarios;
