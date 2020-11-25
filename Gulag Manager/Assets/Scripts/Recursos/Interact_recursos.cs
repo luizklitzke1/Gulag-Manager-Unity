@@ -55,8 +55,6 @@ public class Interact_recursos : MonoBehaviour
             img1.fillAmount = 1;
             img2.fillAmount = 1;
         }
-
-        
         
     }
 

@@ -91,6 +91,15 @@ public class GameEventsHandler : MonoBehaviour
     private void EventosDiarios(int dia, int dia_pos, int semana)
     {
 
+        
+
+    }
+
+
+    //Eventos com chance mensal
+    private void EventosMensais(int mes)
+    {
+
         //Debug.Log("Mudou de dia! Dia: " + Convert.ToString(dia));
         
 
@@ -118,13 +127,7 @@ public class GameEventsHandler : MonoBehaviour
             }
        
         }
-
-    }
-
-
-    //Eventos com chance mensal
-    private void EventosMensais(int mes)
-    {
+        
         //Debug.Log("Mudou de mes! Mes: " + Convert.ToString(mes));
 
         
