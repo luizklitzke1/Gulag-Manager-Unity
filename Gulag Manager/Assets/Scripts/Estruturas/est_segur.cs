@@ -27,11 +27,11 @@ public class est_segur : Estrutura
     {
         if (Seguranca.level == 2)
         {
-            animator.SetInteger("SegurLvl", 2);
+            //animator.SetInteger("SegurLvl", 2);
         }
         else if (Seguranca.level == 3)
         {
-            animator.SetInteger("SegurLvl", 3);
+            //animator.SetInteger("SegurLvl", 3);
         }
     }
 }

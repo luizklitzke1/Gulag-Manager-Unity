@@ -29,8 +29,8 @@ public class Interact_recursos : MonoBehaviour
         if (isCooldown)
         {
 
-            img1.fillAmount -= 1 / cooldown * Time.deltaTime;
-            img2.fillAmount -= 1 / cooldown * Time.deltaTime;
+            //img1.fillAmount -= 1 / cooldown * Time.deltaTime;
+            //img2.fillAmount -= 1 / cooldown * Time.deltaTime;
 
             if (img1.fillAmount <= 0)
             {

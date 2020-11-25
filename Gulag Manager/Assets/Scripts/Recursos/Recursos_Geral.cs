@@ -12,6 +12,9 @@ using TMPro;
 public class Recursos_Geral : MonoBehaviour
 {
 
+    //Script
+    public est_recur recursos;
+    public static est_recur Recursos;
 
     public int carlos = 0;
     //Lista para as mensagens
@@ -27,9 +30,32 @@ public class Recursos_Geral : MonoBehaviour
 
     public TextMeshProUGUI tipo_extract;
 
+
+    //Imagens dos botões
+    public Image img1;
+    public Image img2;
+    public float cooldown = 0.3F;
+    bool isCooldown = false;
+
+    public float risc ;
+
+
+    private Color32 vermelho;
+    private Color32 verde;
+    private Color32 branco;
+    
+
     // Start is called before the first frame update
     void Start()
     {
+
+        vermelho = new Color32(255,0,0,255);
+        verde = new Color32(0,255,0,255);
+
+        recursos = est_recur.Recursos;
+
+        img1.fillAmount = 0;
+        img2.fillAmount = 0;
 
     }
 
@@ -41,16 +67,83 @@ public class Recursos_Geral : MonoBehaviour
 
             carlos ++; 
             SendMessage("Mensagem nova aki ó - " + carlos);
+            
         }
 
         gulag = ControladorGame.gulag_game;
         
         tipo_extract.SetText(gulag.extracao_tipo);
 
+        //Diminui o preenchimento durante o cooldown
+
+        if (isCooldown)
+        {
+
+            img1.fillAmount -= 1 / cooldown * Time.deltaTime;
+            img2.fillAmount -= 1 / cooldown * Time.deltaTime;
+
+            if (img1.fillAmount <= 0)
+            {
+                img1.fillAmount = 0;
+                img2.fillAmount = 0;
+                isCooldown = false;
+            }
+
+        }
+
+    }
+
+     //Função chamada pelo botao de bater
+    public void Hurt()
+    {
+
+        if (isCooldown == false)
+        {
+
+            risc = UnityEngine.Random.Range(0f, 1f);
+
+            SendMessage(("Risco de Acidente: " + risc.ToString("0.00") + "/" + recursos.risc_injur + "."));
+
+            if (risc <= recursos.risc_injur){
+                
+                SendMessage("Um trabalhador foi machucado!", "vermelho");
+
+                Debug.Log("Aiai");
+                
+            }
+            else{
+
+                SendMessage("A trabalhar!", "verde");
+                Debug.Log("A trabalhar");
+            }
+
+            isCooldown = true;
+                img1.fillAmount = 1;
+                img2.fillAmount = 1;
+           
+        }
+        
     }
 
 
-    public void SendMessage(string _text){
+    //Função chamada pelo botao de ser legal
+    public void Cool()
+    {
+
+        if (isCooldown == false)
+        {
+
+            Debug.Log("Eae, meu consagrado!");
+            isCooldown = true;
+            img1.fillAmount = 1;
+            img2.fillAmount = 1;
+
+        }
+        
+    }
+
+
+    public void SendMessage(string _text, string _color = null){
 
         /*
         if(messageList.Count >= maxMessages){
@@ -68,6 +161,21 @@ public class Recursos_Geral : MonoBehaviour
         newMessage.textObject = newText.GetComponent<TextMeshProUGUI>();
 
         newMessage.textObject.text = newMessage.text;
+
+        if (_color != null){
+
+            switch (_color){
+                case ("vermelho"):
+                    newMessage.textObject.color = vermelho;
+                    break;
+                case ("verde"):
+                    newMessage.textObject.color = verde;
+                    break;
+            }
+
+            
+        }
+        
 
         messageList.Add(newMessage);
 

@@ -33,11 +33,11 @@ public class est_recur : Estrutura
 
         if (ControladorGame.gulag_game.extracao_tipo == "Madeira")
         {
-            animator.SetFloat("tipoExtract", -1);
+            //animator.SetFloat("tipoExtract", -1);
         }
         else
         {
-            animator.SetFloat("tipoExtract", 1);
+            //animator.SetFloat("tipoExtract", 1);
         }
 
 
