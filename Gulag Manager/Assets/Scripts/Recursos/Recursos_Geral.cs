@@ -12,9 +12,11 @@ using TMPro;
 public class Recursos_Geral : MonoBehaviour
 {
 
+    public ControladorGame controladorGame;
+
     //Script
     public est_recur recursos;
-    public static est_recur Recursos;
+    //public static est_recur Recursos;
 
     public int carlos = 0;
     //Lista para as mensagens
@@ -29,7 +31,6 @@ public class Recursos_Geral : MonoBehaviour
     private Gulag gulag;
 
     public TextMeshProUGUI tipo_extract;
-
 
     //Imagens dos botões
     public Image img1;
@@ -52,8 +53,6 @@ public class Recursos_Geral : MonoBehaviour
         vermelho = new Color32(255,0,0,255);
         verde = new Color32(0,255,0,255);
 
-        recursos = est_recur.Recursos;
-
         img1.fillAmount = 0;
         img2.fillAmount = 0;
 
@@ -62,6 +61,7 @@ public class Recursos_Geral : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         
         if(Input.GetKeyDown(KeyCode.Space)){
 
@@ -108,6 +108,7 @@ public class Recursos_Geral : MonoBehaviour
                 
                 SendMessage("Um trabalhador foi machucado!", "vermelho");
 
+                gulag.machucados ++;
                 Debug.Log("Aiai");
                 
             }

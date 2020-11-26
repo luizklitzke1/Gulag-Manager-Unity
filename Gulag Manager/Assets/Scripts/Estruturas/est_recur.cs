@@ -29,6 +29,7 @@ public class est_recur : Estrutura
     {
 
 
+
         //Lembrar de tirar isso daki posteriormente
 
         if (ControladorGame.gulag_game.extracao_tipo == "Madeira")
