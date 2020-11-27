@@ -38,8 +38,6 @@ public class GameEventsHandler : MonoBehaviour
 
         gulag = ControladorGame.gulag_game;
 
-        Debug.Log(gulag.extracao_tipo);
-
         //Escreve as funções nos gatilhos do calend
         calend.OnMudarDia += EventosDiarios;
         calend.OnMudarMes += EventosMensais;
@@ -118,7 +116,7 @@ public class GameEventsHandler : MonoBehaviour
         //Probabilidade de nevasca (de 0-5)
         if (gulag.r_nevasca > 0){
             int prob_neve = random.Next(5);  
-            Debug.Log(Convert.ToString(prob_neve)+ " - " + Convert.ToString(gulag.r_nevasca));
+            //Debug.Log(Convert.ToString(prob_neve)+ " - " + Convert.ToString(gulag.r_nevasca));
             if (prob_neve <= gulag.r_nevasca){
 
                 AdicionarEvento("EventoNeve"); 

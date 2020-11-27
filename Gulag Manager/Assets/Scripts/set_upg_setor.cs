@@ -12,10 +12,8 @@ public class set_upg_setor : MonoBehaviour
 
     public void Set_setor()
     {
-        Debug.Log("aloooooooo");
         upgs_esp.setor = _setor;
         obj_upgs.SetActive(true);
-        Debug.Log(_setor + " -- " + upgs_esp.setor);
         upgs_esp.Reset();
     }
 
