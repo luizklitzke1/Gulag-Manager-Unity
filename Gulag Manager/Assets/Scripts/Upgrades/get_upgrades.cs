@@ -56,7 +56,7 @@ public class get_upgrades : MonoBehaviour
 
         }
 
-        titulo.SetText(str_titulo);
+        titulo.SetText("Upgrades - " + (str_titulo));
         titulo.color = clr_titulo;
 
         foreach (GameObject Gobj in objects_upg_info)
@@ -65,6 +65,7 @@ public class get_upgrades : MonoBehaviour
         }
 
         lista = setor + "_upgs";
+        Debug.Log(lista);
         est = "Est_"+ setor;
 
         Get_Current();
@@ -84,9 +85,11 @@ public class get_upgrades : MonoBehaviour
 
         lista_esp  = (List<Upgrade>)controladorGame.GetType().GetField(lista).GetValue(controladorGame);
 
+
         Estrutura estrutura = (Estrutura)controladorGame.GetType().GetField(est).GetValue(controladorGame);
 
-
+        Debug.Log(estrutura);
+        
         for (int i=0; i<4 ;i ++)
         {
 
