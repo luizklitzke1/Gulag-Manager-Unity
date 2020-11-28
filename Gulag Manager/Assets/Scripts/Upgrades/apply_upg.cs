@@ -7,18 +7,57 @@ using UnityEngine;
 public class apply_upg : MonoBehaviour
 {
 
+    //Upg a ser aplicado
     public Upgrade ap_upg; 
+
+    //Estrutura que sofrera mudança
     public Estrutura ap_struct;
     public string lista;
 
+    //Pop-up de falta de dinheiro
+    public GameObject popup;
+
     public ControladorGame controladorGame;
     public get_upgrades get_upgs; 
+    public List<GameObject> objects_upg_info;
+
+    //Gulag atual
+    private Gulag gulag;
 
 
+    public void Start(){
+
+        gulag = ControladorGame.gulag_game;
+
+    }
+
+    //Aplicar o Upg ao apertar o botão
     public void Apply_upg()
     {
 
-        Debug.Log(ap_struct.nome);
+        //Testa se pode ser comprado
+        if (gulag.dinheiro >= ap_upg.price){
+
+            Debug.Log("Dinheiro sucifiente!");
+
+            //Tira o preço
+            gulag.dinheiro -= ap_upg.price;
+
+        }
+        //Pop-up de falta de dinheiro
+        else{
+
+            Debug.Log("Dinheiro insucifiente!");
+            foreach (GameObject Gobj in objects_upg_info)
+            {
+                //Debug.Log(Gobj);
+                Gobj.SetActive(false);
+            }
+            popup.SetActive(true);
+
+        }
+
+        //Debug.Log(ap_struct.nome);
     
 
         for(int i = 0; i<(ap_upg.atrib_effects.Length);i++)
@@ -43,6 +82,19 @@ public class apply_upg : MonoBehaviour
         List<Upgrade> upgs = (List<Upgrade>)controladorGame.GetType().GetField(lista).GetValue(controladorGame);
         upgs.Remove(ap_upg);
         get_upgs.Reset();
+
+    }
+
+    //Fecha o pop-up de erro
+    public void Close_PopUp(){
+
+        foreach (GameObject Gobj in objects_upg_info)
+        {
+            //Debug.Log(Gobj);
+            Gobj.SetActive(true);
+        }
+        popup.SetActive(false);
+
 
     }
 

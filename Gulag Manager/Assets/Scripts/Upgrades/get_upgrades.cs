@@ -11,11 +11,17 @@ public class get_upgrades : MonoBehaviour
     public ControladorGame controladorGame;
     public string setor;
 
+    //Gulag atual
+    private Gulag gulag;
+
+
     private string str_titulo;
     private Color32 clr_titulo;
 
+    public GameObject infonone;
 
     public TextMeshProUGUI titulo;
+    public TextMeshProUGUI dinheiro;
 
     public List<Upgrade> lista_esp;
 
@@ -30,6 +36,7 @@ public class get_upgrades : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gulag = ControladorGame.gulag_game;
 
         switch (setor)
         {
@@ -45,7 +52,7 @@ public class get_upgrades : MonoBehaviour
 
             case "aloj":
                 str_titulo = "Alojamento";
-                clr_titulo = new Color32(255,255,255,255);
+                clr_titulo = new Color32(0,0,255,255);
                 break;
 
             case "segur":
@@ -65,7 +72,7 @@ public class get_upgrades : MonoBehaviour
         }
 
         lista = setor + "_upgs";
-        Debug.Log(lista);
+        //Debug.Log(lista);
         est = "Est_"+ setor;
 
         Get_Current();
@@ -75,6 +82,8 @@ public class get_upgrades : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        dinheiro.SetText(Convert.ToString(gulag.dinheiro));
 
 
     }
@@ -88,8 +97,8 @@ public class get_upgrades : MonoBehaviour
 
         Estrutura estrutura = (Estrutura)controladorGame.GetType().GetField(est).GetValue(controladorGame);
 
-        Debug.Log(estrutura);
-        
+        //Debug.Log(estrutura);
+
         for (int i=0; i<4 ;i ++)
         {
 
@@ -99,7 +108,8 @@ public class get_upgrades : MonoBehaviour
                 //Debug.Log(upgrade.nome+upgrade.desc);
                 //Debug.Log(estrutura.nome);
 
-                lista_upgs_info[i].Set_Value(upgrade.nome,upgrade.desc, upgrade.effects_txt_list,upgrade,estrutura,lista);
+                lista_upgs_info[i].Set_Value(upgrade,estrutura,lista);
+
             }
 
             else
@@ -108,6 +118,17 @@ public class get_upgrades : MonoBehaviour
             }
                 
 
+        }
+
+        //Informa caso não haja nenhum disponível
+        if (lista_esp.Count == 0){
+
+            infonone.SetActive(true);
+            infonone.GetComponent<TypeWritterEffect>().Reset();
+
+        }
+        else{
+            infonone.SetActive(false);
         }
     }
 

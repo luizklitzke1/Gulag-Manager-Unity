@@ -15,6 +15,7 @@ public class GameEventsHandler : MonoBehaviour
 
     //Game object da gameplay
     public GameObject gameplaymain;
+
     //public GameObject estrutuas;
 
     //Gulag atual
@@ -47,7 +48,7 @@ public class GameEventsHandler : MonoBehaviour
     void Update(){
         
         if (fila_eventos.Count()>0 && !(fila_eventos[0].activeSelf)){
-            Debug.Log(fila_eventos[0].name);
+            //Debug.Log(fila_eventos[0].name);
             AtivarEvento(fila_eventos[0].name);
         }
        
@@ -63,12 +64,14 @@ public class GameEventsHandler : MonoBehaviour
 
     //Ativar um evento e o popup
     public void AtivarEvento(string nome){
+
         GameObject temp = eventos_objs.Where(obj => obj.name == nome).SingleOrDefault();
 
         myFx.PlayOneShot (alertFx);
         gameplaymain.SetActive(false);
         popup.SetActive(true);
         temp.SetActive(true);
+
     }
 
     //Desativar um evento e o popup
@@ -104,7 +107,7 @@ public class GameEventsHandler : MonoBehaviour
         //Probabilidade de detecção (de 0-50)
         if (gulag.r_detec > 0){
             int prob_detec = random.Next(50);  
-            Debug.Log(Convert.ToString(prob_detec)+ " - " + Convert.ToString(gulag.r_detec));
+            //Debug.Log(Convert.ToString(prob_detec)+ " - " + Convert.ToString(gulag.r_detec));
             if (prob_detec <= gulag.r_detec){
                 Debug.Log("DETECTADO!");
 
