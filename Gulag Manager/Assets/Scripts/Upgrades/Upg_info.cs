@@ -29,7 +29,7 @@ public class Upg_info : MonoBehaviour
 
         effect_1.SetText(_upg.effects_txt_list[0]);
         if (Convert.ToInt32(_upg.effects_txt_list[1]) == 1){
-            effect_1.color = new Color32(0, 255, 0, 255);
+            effect_1.color = new Color32(26, 118, 26, 255);
         }
         else{
             effect_1.color = new Color32(255, 0, 0, 255);
@@ -37,7 +37,7 @@ public class Upg_info : MonoBehaviour
 
         effect_2.SetText(_upg.effects_txt_list[2]);
         if (Convert.ToInt32(_upg.effects_txt_list[3]) == 1){
-            effect_2.color = new Color32(0, 255, 0, 255);
+            effect_2.color = new Color32(26, 118, 26, 255);
         }
         else{
             effect_2.color = new Color32(255, 0, 0, 255);

@@ -29,7 +29,7 @@ public class TypeWritterEffect : MonoBehaviour
 
     IEnumerator ShowText(){
 
-        for (int i = 0; i < full_text.Length; i ++){
+        for (int i = 0; i < full_text.Length+1; i ++){
             current_text = full_text.Substring(0,i);
             text.SetText(current_text);
             yield return new WaitForSeconds(delay);

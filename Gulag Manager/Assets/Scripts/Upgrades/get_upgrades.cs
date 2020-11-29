@@ -63,7 +63,7 @@ public class get_upgrades : MonoBehaviour
 
         }
 
-        titulo.SetText("Upgrades - " + (str_titulo));
+        titulo.SetText(str_titulo);
         titulo.color = clr_titulo;
 
         foreach (GameObject Gobj in objects_upg_info)
