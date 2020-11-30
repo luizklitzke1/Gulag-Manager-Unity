@@ -38,6 +38,7 @@ public class Recursos_Geral : MonoBehaviour
     bool isCooldown = false;
 
     public float risc ;
+    public float gasto;
 
 
     private Color32 vermelho;
@@ -99,15 +100,30 @@ public class Recursos_Geral : MonoBehaviour
         if (isCooldown == false)
         {
 
+
             risc = UnityEngine.Random.Range(0f, 1f);
 
             SendMessage(("Risco de Acidente: " + risc.ToString("0.00") + "/" + recursos.risc_injur + "."));
+
+            if(gulag.machucados > 0){
+
+                gulag.dinheiro += 150 * ((gulag.populacao - gulag.machucados) / gulag.populacao);
+
+                
+
+            }else{
+
+                gulag.dinheiro += 150;
+
+            }
+
 
             if (risc <= recursos.risc_injur){
                 
                 SendMessage("Um trabalhador foi machucado!", "vermelho");
 
                 gulag.machucados ++;
+                gulag.dinheiro += 20;
                 Debug.Log("Aiai");
                 
             }
@@ -120,7 +136,6 @@ public class Recursos_Geral : MonoBehaviour
             isCooldown = true;
                 img1.fillAmount = 1;
                 img2.fillAmount = 1;
-           
         }
         
     }
@@ -132,7 +147,9 @@ public class Recursos_Geral : MonoBehaviour
 
         if (isCooldown == false)
         {
-
+            gulag.machucados --;
+            gasto = UnityEngine.Random.Range(80f, 150f);
+            SendMessage(("Um trabalhador está recebendo tratamento. Você pagou: " + gasto ));
             Debug.Log("Eae, meu consagrado!");
             isCooldown = true;
             img1.fillAmount = 1;
