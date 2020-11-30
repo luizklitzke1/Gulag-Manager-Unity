@@ -91,7 +91,7 @@ public class GameEventsHandler : MonoBehaviour
     //Eventos com chance diaria
     private void EventosDiarios(int dia, int dia_pos, int semana)
     {
-
+        AdicionarEvento("Eventocarlos");  
         
 
     }
