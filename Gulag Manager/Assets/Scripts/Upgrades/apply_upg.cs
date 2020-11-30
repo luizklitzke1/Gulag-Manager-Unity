@@ -19,7 +19,7 @@ public class apply_upg : MonoBehaviour
 
     public ControladorGame controladorGame;
     public get_upgrades get_upgs; 
-    public List<GameObject> objects_upg_info;
+    //public List<GameObject> objects_upg_info;
 
     //Gulag atual
     private Gulag gulag;
@@ -43,24 +43,7 @@ public class apply_upg : MonoBehaviour
             //Tira o preço
             gulag.dinheiro -= ap_upg.price;
 
-        }
-        //Pop-up de falta de dinheiro
-        else{
-
-            Debug.Log("Dinheiro insucifiente!");
-            foreach (GameObject Gobj in objects_upg_info)
-            {
-                //Debug.Log(Gobj);
-                Gobj.SetActive(false);
-            }
-            popup.SetActive(true);
-
-        }
-
-        //Debug.Log(ap_struct.nome);
-    
-
-        for(int i = 0; i<(ap_upg.atrib_effects.Length);i++)
+             for(int i = 0; i<(ap_upg.atrib_effects.Length);i++)
         {
     
             if (i%2==0)
@@ -83,16 +66,37 @@ public class apply_upg : MonoBehaviour
         upgs.Remove(ap_upg);
         get_upgs.Reset();
 
+        }
+        //Pop-up de falta de dinheiro
+        else{
+
+            Debug.Log("Dinheiro insucifiente!");
+            /*
+            foreach (GameObject Gobj in objects_upg_info)
+            {
+                //Debug.Log(Gobj);
+                Gobj.SetActive(false);
+            }
+            */
+            popup.SetActive(true);
+
+        }
+
+        //Debug.Log(ap_struct.nome);
+    
+
     }
 
     //Fecha o pop-up de erro
     public void Close_PopUp(){
 
+        /*
         foreach (GameObject Gobj in objects_upg_info)
         {
             //Debug.Log(Gobj);
             Gobj.SetActive(true);
         }
+        */
         popup.SetActive(false);
 
 
