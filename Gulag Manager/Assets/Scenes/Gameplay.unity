@@ -1941,9 +1941,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_SizeDelta: {x: -17, y: 20}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &109556977
 MonoBehaviour:
@@ -1987,8 +1987,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1992697014}
   m_HandleRect: {fileID: 1992697013}
   m_Direction: 0
-  m_Value: -77351440
-  m_Size: 0.9999263
+  m_Value: 3880.0217
+  m_Size: 0.9998372
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3687,9 +3687,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &165007163
 MonoBehaviour:
@@ -6754,7 +6754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &353628221
 Transform:
   m_ObjectHideFlags: 0
@@ -6805,7 +6805,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controladorGame: {fileID: 0}
-  recursos: {fileID: 1872934863}
   carlos: 0
   messageList: []
   chatPanel: {fileID: 1844270982}
@@ -6818,6 +6817,7 @@ MonoBehaviour:
   cooldown: 5
   risc: 0
   gasto: 0
+  lucro: 0
 --- !u!1 &355844700
 GameObject:
   m_ObjectHideFlags: 0
@@ -10462,7 +10462,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14401,8 +14401,8 @@ MonoBehaviour:
   estado: 0
   animator: {fileID: 0}
   alocados: 0
-  doentes: 0
   chance_morte: 0.5
+  r: 0
   leitos: 5
   vel_atend: 0
 --- !u!1 &797984033
@@ -28674,6 +28674,8 @@ MonoBehaviour:
   gameplaymain: {fileID: 1936600773}
   firstTime: 1
   txt_vel: {fileID: 1735447547}
+  risc: 0
+  rendaFixa: 0
   dia: 1
   dia_pos: 0
   semana: 1
@@ -33534,7 +33536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.029403383, y: 1}
   m_AnchorMax: {x: 0.95800006, y: 1}
-  m_AnchoredPosition: {x: 2308633.8, y: -254.64426}
+  m_AnchoredPosition: {x: -267.91486, y: -254.64427}
   m_SizeDelta: {x: 29.000061, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1844270984
@@ -35033,7 +35035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1936600774
 Transform:
   m_ObjectHideFlags: 0
@@ -36020,8 +36022,8 @@ RectTransform:
   m_Father: {fileID: 191812389}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.00016278028, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

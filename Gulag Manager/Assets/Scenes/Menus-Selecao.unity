@@ -321,16 +321,12 @@ MonoBehaviour:
   clima: Frio
   recursos: 10
   extracao_tipo: "Minera\xE7\xE3o"
-  aquecedor: 0
-  seguranca: 0
-  medica: 0
-  lazer: 0
   felicidade: 0
   prod_mensal: 0
   medo: 0
-  populacao: 0
+  populacao: 20
   machucados: 0
-  dinheiro: 0
+  dinheiro: 150
 --- !u!1 &148258893
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,16 +622,12 @@ MonoBehaviour:
   clima: Frio
   recursos: 0
   extracao_tipo: Nop
-  aquecedor: 0
-  seguranca: 0
-  medica: 0
-  lazer: 0
   felicidade: 0
   prod_mensal: 0
   medo: 0
-  populacao: 0
+  populacao: 20
   machucados: 0
-  dinheiro: 0
+  dinheiro: 150
 --- !u!1 &244706291
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,16 +955,12 @@ MonoBehaviour:
   clima: Frio
   recursos: 0
   extracao_tipo: Nop
-  aquecedor: 0
-  seguranca: 0
-  medica: 0
-  lazer: 0
   felicidade: 0
   prod_mensal: 0
   medo: 0
-  populacao: 0
+  populacao: 20
   machucados: 0
-  dinheiro: 0
+  dinheiro: 150
 --- !u!1 &346885129
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,16 +3037,12 @@ MonoBehaviour:
   clima: Frio
   recursos: 0
   extracao_tipo: Nop
-  aquecedor: 0
-  seguranca: 0
-  medica: 0
-  lazer: 0
   felicidade: 0
   prod_mensal: 0
   medo: 0
-  populacao: 0
+  populacao: 20
   machucados: 0
-  dinheiro: 0
+  dinheiro: 150
 --- !u!1 &813879838
 GameObject:
   m_ObjectHideFlags: 0
@@ -5557,16 +5541,12 @@ MonoBehaviour:
   clima: Congelante
   recursos: 6
   extracao_tipo: Madeira
-  aquecedor: 0
-  seguranca: 0
-  medica: 0
-  lazer: 0
   felicidade: 0
   prod_mensal: 0
   medo: 0
-  populacao: 0
+  populacao: 20
   machucados: 0
-  dinheiro: 0
+  dinheiro: 150
 --- !u!1 &1244227393
 GameObject:
   m_ObjectHideFlags: 0
@@ -7333,16 +7313,12 @@ MonoBehaviour:
   clima: Muito Frio
   recursos: 3
   extracao_tipo: "Minera\xE7\xE3o"
-  aquecedor: 0
-  seguranca: 0
-  medica: 0
-  lazer: 0
   felicidade: 0
   prod_mensal: 0
   medo: 0
-  populacao: 0
+  populacao: 20
   machucados: 0
-  dinheiro: 0
+  dinheiro: 150
 --- !u!850595691 &1673803327
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -9374,16 +9350,12 @@ MonoBehaviour:
   clima: Frio
   recursos: 8
   extracao_tipo: Madeira
-  aquecedor: 0
-  seguranca: 0
-  medica: 0
-  lazer: 0
   felicidade: 0
   prod_mensal: 0
   medo: 0
-  populacao: 0
+  populacao: 20
   machucados: 0
-  dinheiro: 0
+  dinheiro: 150
 --- !u!1 &1942253643
 GameObject:
   m_ObjectHideFlags: 0

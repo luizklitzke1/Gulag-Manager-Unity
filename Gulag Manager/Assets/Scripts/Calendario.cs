@@ -18,6 +18,9 @@ public class Calendario : MonoBehaviour
 
     public TextMeshProUGUI txt_vel;
 
+    public float risc;
+    public float rendaFixa;
+
     /*public class OnMudarDiaArgs: EventArgs
     {
         public int dia;
@@ -71,7 +74,7 @@ public class Calendario : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        rendaFixa = ControladorGame.gulag_game.populacao;
     }
 
     IEnumerator Contar_Dia()
@@ -103,12 +106,19 @@ public class Calendario : MonoBehaviour
                 OnMudarDia?.Invoke(dia, dia_pos, semana);
 
                 dia++;
+                ControladorGame.gulag_game.dinheiro += rendaFixa;
             }
 
             if (dia_pos == 6)
             {
                 dia_pos = 0;
                 semana++;
+                risc = UnityEngine.Random.Range(0f, 1f);
+                ControladorGame.gulag_game.populacao ++;
+                if(risc <= est_recur.Recursos.risc_injur){
+                    ControladorGame.gulag_game.machucados ++;
+                    ControladorGame.gulag_game.populacao --;
+                }
             }
             else
             {
@@ -121,9 +131,7 @@ public class Calendario : MonoBehaviour
                 mes = 1;
             }
 
-            ControladorGame.gulag_game.machucados += 1;
-            ControladorGame.gulag_game.populacao += 1;
-            ControladorGame.gulag_game.dinheiro += 11.23f;
+            
 
         }
         else

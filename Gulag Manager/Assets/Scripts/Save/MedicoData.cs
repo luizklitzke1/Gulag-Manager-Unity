@@ -12,7 +12,6 @@ public class MedicoData
 
     public MedicoData(est_med estMed) {
 
-        med_doentes = estMed.doentes;
         med_chance_morte = estMed.chance_morte;
         med_leitos = estMed.leitos;
         med_vel_atend = estMed.vel_atend;

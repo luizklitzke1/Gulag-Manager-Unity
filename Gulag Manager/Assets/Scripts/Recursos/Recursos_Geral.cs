@@ -13,10 +13,6 @@ public class Recursos_Geral : MonoBehaviour
 
     public ControladorGame controladorGame;
 
-    //Script
-    public est_recur recursos;
-    //public static est_recur Recursos;
-
     public int carlos = 0;
     //Lista para as mensagens
     [SerializeField]
@@ -26,9 +22,6 @@ public class Recursos_Geral : MonoBehaviour
 
     public int maxMessages = 9;
 
-    //Gulag atual
-    private Gulag gulag;
-
     public TextMeshProUGUI tipo_extract;
 
     //Imagens dos botões
@@ -37,8 +30,9 @@ public class Recursos_Geral : MonoBehaviour
     public float cooldown = 0.3F;
     bool isCooldown = false;
 
-    public float risc ;
+    public float risc;
     public float gasto;
+    public float lucro;
 
 
     private Color32 vermelho;
@@ -70,9 +64,9 @@ public class Recursos_Geral : MonoBehaviour
             
         }
 
-        gulag = ControladorGame.gulag_game;
+        lucro = 5*ControladorGame.gulag_game.populacao;
         
-        tipo_extract.SetText(gulag.extracao_tipo);
+        tipo_extract.SetText(ControladorGame.gulag_game.extracao_tipo);
 
         //Diminui o preenchimento durante o cooldown
 
@@ -103,27 +97,16 @@ public class Recursos_Geral : MonoBehaviour
 
             risc = UnityEngine.Random.Range(0f, 1f);
 
-            SendMessage(("Risco de Acidente: " + risc.ToString("0.00") + "/" + recursos.risc_injur + "."));
-
-            if(gulag.machucados > 0){
-
-                gulag.dinheiro += 150 * ((gulag.populacao - gulag.machucados) / gulag.populacao);
-
-                
-
-            }else{
-
-                gulag.dinheiro += 150;
-
-            }
+            SendMessage(("Risco de Acidente: " + risc.ToString("0.00") + "/" + est_recur.Recursos.risc_injur + "."));
 
 
-            if (risc <= recursos.risc_injur){
+            if (risc <= est_recur.Recursos.risc_injur){
                 
                 SendMessage("Um trabalhador foi machucado!", "vermelho");
 
-                gulag.machucados ++;
-                gulag.dinheiro += 20;
+                ControladorGame.gulag_game.populacao--;
+                ControladorGame.gulag_game.machucados ++;
+                ControladorGame.gulag_game.dinheiro += lucro/2;
                 Debug.Log("Aiai");
                 
             }
@@ -131,11 +114,20 @@ public class Recursos_Geral : MonoBehaviour
 
                 SendMessage("A trabalhar!", "verde");
                 Debug.Log("A trabalhar");
+                if(ControladorGame.gulag_game.machucados > 0){
+
+                    ControladorGame.gulag_game.dinheiro += lucro * ((ControladorGame.gulag_game.populacao - ControladorGame.gulag_game.machucados) / ControladorGame.gulag_game.populacao);
+
+                }else{
+
+                    ControladorGame.gulag_game.dinheiro += lucro;
+
+                }
             }
 
             isCooldown = true;
-                img1.fillAmount = 1;
-                img2.fillAmount = 1;
+            img1.fillAmount = 1;
+            img2.fillAmount = 1;
         }
         
     }
@@ -147,14 +139,33 @@ public class Recursos_Geral : MonoBehaviour
 
         if (isCooldown == false)
         {
-            gulag.machucados --;
             gasto = UnityEngine.Random.Range(80f, 150f);
-            SendMessage(("Um trabalhador está recebendo tratamento."));
-            SendMessage(("Você pagou: " + gasto ));
-            Debug.Log("Eae, meu consagrado!");
-            isCooldown = true;
-            img1.fillAmount = 1;
-            img2.fillAmount = 1;
+
+            if(ControladorGame.gulag_game.dinheiro >= gasto ){
+
+                if(ControladorGame.gulag_game.machucados <= 0){
+
+                    SendMessage(("Você não possui trabalhadores feridos!."));
+
+                }else{
+                
+                    ControladorGame.gulag_game.machucados++;
+                    ControladorGame.gulag_game.populacao++;
+
+                    ControladorGame.gulag_game.dinheiro -= gasto;
+                    SendMessage(("Um trabalhador está recebendo tratamento."));
+                    SendMessage(("Você pagou: " + gasto ));
+                    Debug.Log("Eae, meu consagrado!");
+                    isCooldown = true;
+                    img1.fillAmount = 1;
+                    img2.fillAmount = 1;
+
+                }
+            }else{
+
+                SendMessage(("Você não possui dinheiro para tratar um trabalhador."));
+            }
+
 
         }
         

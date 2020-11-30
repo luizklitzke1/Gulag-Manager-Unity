@@ -21,13 +21,10 @@ public class apply_upg : MonoBehaviour
     public get_upgrades get_upgs; 
     //public List<GameObject> objects_upg_info;
 
-    //Gulag atual
-    private Gulag gulag;
 
 
     public void Start(){
 
-        gulag = ControladorGame.gulag_game;
 
     }
 
@@ -36,14 +33,14 @@ public class apply_upg : MonoBehaviour
     {
 
         //Testa se pode ser comprado
-        if (gulag.dinheiro >= ap_upg.price){
+        if (ControladorGame.gulag_game.dinheiro >= ap_upg.price){
 
             Debug.Log("Dinheiro sucifiente!");
 
             //Tira o preço
-            gulag.dinheiro -= ap_upg.price;
+            ControladorGame.gulag_game.dinheiro -= ap_upg.price;
 
-             for(int i = 0; i<(ap_upg.atrib_effects.Length);i++)
+            for(int i = 0; i<(ap_upg.atrib_effects.Length);i++)
         {
     
             if (i%2==0)

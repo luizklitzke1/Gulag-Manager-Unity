@@ -11,10 +11,6 @@ public class get_upgrades : MonoBehaviour
     public ControladorGame controladorGame;
     public string setor;
 
-    //Gulag atual
-    private Gulag gulag;
-
-
     private string str_titulo;
     private Color32 clr_titulo;
 
@@ -36,7 +32,6 @@ public class get_upgrades : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gulag = ControladorGame.gulag_game;
 
         switch (setor)
         {
@@ -83,7 +78,7 @@ public class get_upgrades : MonoBehaviour
     void Update()
     {
 
-        dinheiro.SetText(Convert.ToString(gulag.dinheiro));
+        dinheiro.SetText(Convert.ToString(ControladorGame.gulag_game.dinheiro));
 
 
     }
