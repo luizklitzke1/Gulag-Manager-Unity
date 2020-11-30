@@ -149,7 +149,8 @@ public class Recursos_Geral : MonoBehaviour
         {
             gulag.machucados --;
             gasto = UnityEngine.Random.Range(80f, 150f);
-            SendMessage(("Um trabalhador está recebendo tratamento. Você pagou: " + gasto ));
+            SendMessage(("Um trabalhador está recebendo tratamento."));
+            SendMessage(("Você pagou: " + gasto ));
             Debug.Log("Eae, meu consagrado!");
             isCooldown = true;
             img1.fillAmount = 1;

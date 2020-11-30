@@ -20,7 +20,7 @@ public class calend_visual : MonoBehaviour
     void Start()
     {
 
-        txt_mes_ano.SetText(calend.meses[calend.mes - 1] + " - " + Convert.ToString(calend.ano));
+        txt_mes_ano.SetText(calend.meses[calend.mes - 1] + " " + Convert.ToString(calend.ano));
         txt_dia.SetText("Dia - " + Convert.ToString(calend.dia));
         txt_vel.SetText("Vel - " + Convert.ToString(calend.vel) + "s / dia");
 
@@ -42,7 +42,7 @@ public class calend_visual : MonoBehaviour
     private void MudarMesVisual(int mes)
     {
 
-        txt_mes_ano.SetText(calend.meses[calend.mes - 1] + " - " + Convert.ToString(calend.ano));
+        txt_mes_ano.SetText(calend.meses[calend.mes - 1] + " " + Convert.ToString(calend.ano));
 
         foreach (TextMeshProUGUI dia in lista_dias)
         {
