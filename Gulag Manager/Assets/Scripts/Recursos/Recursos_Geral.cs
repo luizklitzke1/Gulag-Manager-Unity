@@ -64,7 +64,7 @@ public class Recursos_Geral : MonoBehaviour
             
         }
 
-        lucro = 5*ControladorGame.gulag_game.populacao;
+        
         
         tipo_extract.SetText(ControladorGame.gulag_game.extracao_tipo);
 
@@ -94,10 +94,11 @@ public class Recursos_Geral : MonoBehaviour
         if (isCooldown == false)
         {
 
-
+            lucro = 5*ControladorGame.gulag_game.populacao;
             risc = UnityEngine.Random.Range(0f, 1f);
 
             SendMessage(("Risco de Acidente: " + risc.ToString("0.00") + "/" + est_recur.Recursos.risc_injur + "."));
+            
 
 
             if (risc <= est_recur.Recursos.risc_injur){
@@ -106,7 +107,8 @@ public class Recursos_Geral : MonoBehaviour
 
                 ControladorGame.gulag_game.populacao--;
                 ControladorGame.gulag_game.machucados ++;
-                ControladorGame.gulag_game.dinheiro += lucro/2;
+                lucro = lucro/2;
+                ControladorGame.gulag_game.dinheiro += lucro;
                 Debug.Log("Aiai");
                 
             }
@@ -115,16 +117,18 @@ public class Recursos_Geral : MonoBehaviour
                 SendMessage("A trabalhar!", "verde");
                 Debug.Log("A trabalhar");
                 if(ControladorGame.gulag_game.machucados > 0){
-
-                    ControladorGame.gulag_game.dinheiro += lucro * ((ControladorGame.gulag_game.populacao - ControladorGame.gulag_game.machucados) / ControladorGame.gulag_game.populacao);
+                    lucro = lucro * ((ControladorGame.gulag_game.populacao - ControladorGame.gulag_game.machucados) / ControladorGame.gulag_game.populacao);
+                    ControladorGame.gulag_game.dinheiro += lucro;
 
                 }else{
 
                     ControladorGame.gulag_game.dinheiro += lucro;
 
                 }
+
             }
 
+            SendMessage(("Você faturou: " + lucro.ToString() + "."));
             isCooldown = true;
             img1.fillAmount = 1;
             img2.fillAmount = 1;

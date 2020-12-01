@@ -19,12 +19,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1920
-    height: 957
-  m_MinSize: {x: 678, y: 471}
-  m_MaxSize: {x: 18001, y: 14021}
+    width: 2560
+    height: 947
+  m_MinSize: {x: 739, y: 492}
+  m_MaxSize: {x: 24004, y: 14042}
   vertical: 0
-  controlID: 11069
+  controlID: 184
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,10 +46,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 443
+    x: 591
     y: 73
-    width: 922
-    height: 557
+    width: 1230
+    height: 551
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 922, y: 519}
+  m_TargetSize: {x: 942, y: 530}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -72,10 +72,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -461
-    m_HBaseRangeMax: 461
-    m_VBaseRangeMin: -259.5
-    m_VBaseRangeMax: 259.5
+    m_HBaseRangeMin: -471
+    m_HBaseRangeMax: 471
+    m_VBaseRangeMin: -265
+    m_VBaseRangeMax: 265
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -93,23 +93,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 922
-      height: 536
+      width: 1230
+      height: 530
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 461, y: 268}
+    m_Translation: {x: 615, y: 265}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -461
-      y: -268
-      width: 922
-      height: 536
+      x: -615
+      y: -265
+      width: 1230
+      height: 530
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 922, y: 557}
+  m_LastWindowPixelSize: {x: 1230, y: 551}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -134,12 +134,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1367
-    height: 957
-  m_MinSize: {x: 403, y: 471}
-  m_MaxSize: {x: 14001, y: 14021}
+    width: 1823
+    height: 947
+  m_MinSize: {x: 463, y: 492}
+  m_MaxSize: {x: 20003, y: 14042}
   vertical: 1
-  controlID: 11070
+  controlID: 185
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,12 +159,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1367
-    height: 578
+    width: 1823
+    height: 572
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 11040
+  controlID: 124
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -182,8 +182,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 443
-    height: 578
+    width: 591
+    height: 572
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
@@ -214,15 +214,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 442
-    height: 557
+    width: 590
+    height: 551
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c8faffff3cfbffffe24200008a430000504400002446000056480000b2490000
+      m_ExpandedIDs: e6e8ffff38eaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -261,12 +261,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 443
+    x: 591
     y: 0
-    width: 924
-    height: 578
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 1232
+    height: 572
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -568,13 +568,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 578
-    width: 1367
-    height: 379
-  m_MinSize: {x: 331, y: 250}
-  m_MaxSize: {x: 14001, y: 10000}
+    y: 572
+    width: 1823
+    height: 375
+  m_MinSize: {x: 463, y: 271}
+  m_MaxSize: {x: 20003, y: 10021}
   vertical: 0
-  controlID: 11071
+  controlID: 186
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -585,23 +585,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 646
-    height: 379
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
+    width: 861
+    height: 375
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -624,9 +624,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 756
-    width: 645
-    height: 253
+    y: 645
+    width: 860
+    height: 354
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -648,14 +648,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\luizk\Documents\Gulag-Manager-Unity\Gulag Manager
+  m_LastProjectPath: C:\Users\Arthur\Desktop\Gulag-Manager-Unity\Gulag-Manager-Unity\Gulag
+    Manager
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 295}
-    m_SelectedIDs: f2400000
-    m_LastClickedID: 16626
-    m_ExpandedIDs: 000000007a4000007c4000007e40000080400000824000008440000086400000884000008a4000008c4000008e40000000ca9a3b
+    scrollPos: {x: 0, y: 242}
+    m_SelectedIDs: 98420000
+    m_LastClickedID: 17048
+    m_ExpandedIDs: 0000000010420000124200001442000016420000184200001a4200001c4200001e42000020420000224200002442000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -683,7 +684,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007a4000007c4000007e40000080400000824000008440000086400000884000008a4000008c4000008e40000000ca9a3b
+    m_ExpandedIDs: 0000000010420000124200001442000016420000184200001a4200001c4200001e420000204200002242000024420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -708,8 +709,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: bc420000
+    m_LastClickedInstanceID: 17084
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
@@ -761,9 +762,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 651
-    width: 645
-    height: 358
+    y: 645
+    width: 860
+    height: 354
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &15
 MonoBehaviour:
@@ -780,10 +781,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 646
+    x: 861
     y: 0
-    width: 721
-    height: 379
+    width: 962
+    height: 375
   m_MinSize: {x: 230, y: 250}
   m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 16}
@@ -812,10 +813,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 646
-    y: 651
-    width: 719
-    height: 358
+    x: 861
+    y: 645
+    width: 960
+    height: 354
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -830,21 +831,22 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Events
+    - Assets
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Events
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\luizk\Documents\Gulag-Manager-Unity\Gulag Manager
+  m_LastProjectPath: C:\Users\Arthur\Desktop\Gulag-Manager-Unity\Gulag-Manager-Unity\Gulag
+    Manager
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 386}
-    m_SelectedIDs: f8400000
-    m_LastClickedID: 16632
-    m_ExpandedIDs: 000000007a4000007c4000007e40000080400000824000008440000086400000884000008a4000008c4000008e40000000ca9a3b
+    scrollPos: {x: 0, y: 143}
+    m_SelectedIDs: 10420000
+    m_LastClickedID: 16912
+    m_ExpandedIDs: 0000000010420000124200001442000016420000184200001a4200001c4200001e42000020420000224200002442000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -872,7 +874,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007a4000007c4000007e40000080400000824000008440000086400000884000008a4000008c4000008e40000000ca9a3b
+    m_ExpandedIDs: 0000000010420000124200001442000016420000184200001a4200001c4200001e420000204200002242000024420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -897,8 +899,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 004a0000
-    m_LastClickedInstanceID: 18944
+    m_SelectedInstanceIDs: bc420000
+    m_LastClickedInstanceID: 17084
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 923200003a3a0000
     m_RenameOverlay:
@@ -943,12 +945,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1367
+    x: 1823
     y: 0
-    width: 553
-    height: 957
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 737
+    height: 947
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -976,10 +978,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1367
+    x: 1823
     y: 73
-    width: 552
-    height: 936
+    width: 736
+    height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -987,7 +989,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 18944
+  m_LastInspectedObjectInstanceID: 17084
   m_LastVerticalScrollValue: 0
   m_AssetGUID: 
   m_InstanceID: 0

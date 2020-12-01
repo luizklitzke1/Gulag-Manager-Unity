@@ -16,9 +16,12 @@ public class Calendario : MonoBehaviour
     public delegate void OnMudarMesDelegate(int mes);
     public event OnMudarMesDelegate OnMudarMes;
 
+    public delegate void OnMudarSemanaDelegate(int semana);
+    public event OnMudarSemanaDelegate OnMudarSemana;
+
     public TextMeshProUGUI txt_vel;
 
-    public float risc;
+    
     public float rendaFixa;
 
     /*public class OnMudarDiaArgs: EventArgs
@@ -63,6 +66,7 @@ public class Calendario : MonoBehaviour
 
         OnMudarMes?.Invoke(mes);
         OnMudarDia?.Invoke(dia, dia_pos, semana);
+        OnMudarSemana?.Invoke(semana);
 
         StartCoroutine("Contar_Dia");
 
@@ -99,6 +103,7 @@ public class Calendario : MonoBehaviour
                 semana = 1;
                 OnMudarMes?.Invoke(mes);
                 OnMudarDia?.Invoke(dia, dia_pos, semana);
+                OnMudarSemana?.Invoke(semana);
                 dia++;
             }
             else
@@ -111,14 +116,10 @@ public class Calendario : MonoBehaviour
 
             if (dia_pos == 6)
             {
+                OnMudarSemana?.Invoke(semana);
                 dia_pos = 0;
                 semana++;
-                risc = UnityEngine.Random.Range(0f, 1f);
-                ControladorGame.gulag_game.populacao ++;
-                if(risc <= est_recur.Recursos.risc_injur){
-                    ControladorGame.gulag_game.machucados ++;
-                    ControladorGame.gulag_game.populacao --;
-                }
+                
             }
             else
             {

@@ -10,7 +10,6 @@ public class est_med : Estrutura
     public int leitos = 5;
     public int vel_atend;
     public static est_med Medico;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +39,6 @@ public class est_med : Estrutura
 
             ControladorGame.gulag_game.machucados--;
             
-        }
-
-        if (Medico.level == 2)
-        {
-            animator.SetInteger("medicoLvl", 2);
         }
     }
 

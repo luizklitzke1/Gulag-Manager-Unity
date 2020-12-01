@@ -25,13 +25,6 @@ public class est_segur : Estrutura
     // Update is called once per frame
     void Update()
     {
-        if (Seguranca.level == 2)
-        {
-            //animator.SetInteger("SegurLvl", 2);
-        }
-        else if (Seguranca.level == 3)
-        {
-            //animator.SetInteger("SegurLvl", 3);
-        }
+       
     }
 }

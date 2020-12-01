@@ -42,6 +42,7 @@ public class GameEventsHandler : MonoBehaviour
         //Escreve as funções nos gatilhos do calend
         calend.OnMudarDia += EventosDiarios;
         calend.OnMudarMes += EventosMensais;
+        calend.OnMudarSemana += EventosSemanais;
         
     }
 
@@ -51,14 +52,12 @@ public class GameEventsHandler : MonoBehaviour
             //Debug.Log(fila_eventos[0].name);
             AtivarEvento(fila_eventos[0].name);
         }
-       
-
     }
 
     //Adicionar eventos para a lista de execução
     public void AdicionarEvento(string nome){
-         GameObject temp = eventos_objs.Where(obj => obj.name == nome).SingleOrDefault();
-         fila_eventos.Add(temp);
+        GameObject temp = eventos_objs.Where(obj => obj.name == nome).SingleOrDefault();
+        fila_eventos.Add(temp);
 
     }
 
@@ -91,8 +90,16 @@ public class GameEventsHandler : MonoBehaviour
     //Eventos com chance diaria
     private void EventosDiarios(int dia, int dia_pos, int semana)
     {
-        AdicionarEvento("Eventocarlos");  
-        
+
+
+
+    }
+
+    //Eventos com chance diaria
+    private void EventosSemanais(int semana)
+    {
+
+        AdicionarEvento("EventoNovoResidente");
 
     }
 
@@ -102,7 +109,8 @@ public class GameEventsHandler : MonoBehaviour
     {
 
         //Debug.Log("Mudou de dia! Dia: " + Convert.ToString(dia));
-        
+                
+
 
         //Probabilidade de detecção (de 0-50)
         if (gulag.r_detec > 0){
@@ -126,7 +134,6 @@ public class GameEventsHandler : MonoBehaviour
                 AdicionarEvento("EventoTeste"); 
 
             }
-       
         }
         
         //Debug.Log("Mudou de mes! Mes: " + Convert.ToString(mes));
